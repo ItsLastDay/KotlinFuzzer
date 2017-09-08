@@ -1,0 +1,18 @@
+fun prefixOps(): Unit {
+fun foo() = (- 1)
+fun foo() = (labl@ (++ (! 5)))
+fun foo() = ( z)
+fun foo() = ( (+ z))
+fun foo() = (-- z)
+}
+fun postfixOps(): Unit {
+fun foo() = ::bar
+fun foo() = String::class
+fun foo() = (Any)?::ext
+fun foo() = 5++
+fun foo() = 6--
+fun foo() = null!!
+fun foo() = a?.map<Int>({it * 2}).filter({it == 4})
+fun foo() = bar({})<Any, Any>("qwe", *lst, x=5)
+fun foo() = ::arr[5, 6, 7][8]
+}

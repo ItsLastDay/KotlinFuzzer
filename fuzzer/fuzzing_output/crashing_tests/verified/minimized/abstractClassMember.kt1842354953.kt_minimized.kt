@@ -1,0 +1,1 @@
+fun box(): String = ((((A::foo))!! ?: ((A::foo)!!)))(B())

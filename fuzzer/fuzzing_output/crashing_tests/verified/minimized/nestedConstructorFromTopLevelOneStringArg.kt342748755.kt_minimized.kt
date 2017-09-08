@@ -1,0 +1,1 @@
+fun box() = (((A::Nested)!!))!!("OK").result

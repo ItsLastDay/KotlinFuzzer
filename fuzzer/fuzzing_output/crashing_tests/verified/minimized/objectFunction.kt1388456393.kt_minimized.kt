@@ -1,0 +1,1 @@
+fun box(): String = (((Host::foo)!!))!!.call("O") + (CompanionOwner.Companion::bar).call("K")

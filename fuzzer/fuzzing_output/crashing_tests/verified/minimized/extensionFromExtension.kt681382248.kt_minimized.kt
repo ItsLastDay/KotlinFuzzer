@@ -1,0 +1,1 @@
+fun A.foo() = (((A::bar)!!)!!)(this, "OK")

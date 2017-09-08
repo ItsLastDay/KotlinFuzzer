@@ -1,0 +1,1 @@
+data class A(val x: Int, var y: String)

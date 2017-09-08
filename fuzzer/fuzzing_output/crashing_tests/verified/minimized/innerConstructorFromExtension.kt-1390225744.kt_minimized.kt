@@ -1,0 +1,1 @@
+fun A.foo() = (((A::Inner))!!!!)(this).o + (A::Inner)(this).k

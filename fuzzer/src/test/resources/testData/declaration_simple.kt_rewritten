@@ -1,0 +1,25 @@
+fun foo(): Unit {
+fun g(): Unit {
+
+}
+val prop: String
+
+
+val prop_2: Unit
+
+
+var (x, y, z) = 1
+val t: Int by 456
+class A {
+
+}
+interface B {
+
+}
+typealias bla = Int
+object x {
+
+}
+annotation class X
+object nobody
+}

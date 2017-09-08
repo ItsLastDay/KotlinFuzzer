@@ -1,0 +1,7 @@
+fun <T, reified in R> java.lang<in R, out U>.b<*>.List<T>.foo() = 1
+
+interface ASTNodeVisitor<out R, in D> {}
+
+typealias L<T> = List<T>
+
+val <T> prop = listOf<T>()

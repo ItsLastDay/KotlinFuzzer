@@ -1,0 +1,1 @@
+tailrec fun box() = (((::A)!!)!!)().result

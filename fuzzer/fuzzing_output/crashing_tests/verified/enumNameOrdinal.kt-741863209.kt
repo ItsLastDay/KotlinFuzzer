@@ -1,0 +1,20 @@
+enum class E {
+
+ I
+
+}
+fun box(): String {
+val i = (E::name).get(E.I)
+if (i != "I") {
+return "Fail $i"
+}
+val n = (((if ((true)!!) {
+(E::ordinal)
+} else {
+(E::ordinal)
+}))!!).get(E.I)
+if (n != 0) {
+return "Fail $n"
+}
+return "OK"
+}

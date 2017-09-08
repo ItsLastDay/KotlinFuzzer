@@ -1,0 +1,1 @@
+suspend fun box() = (((A<String>::foo))!!!!)(A("OK"))

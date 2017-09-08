@@ -1,0 +1,1 @@
+fun box(): String = ((::foo))!!!!.callBy(mapOf())
