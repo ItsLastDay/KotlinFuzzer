@@ -1,4 +1,4 @@
-# KotlinFuzzer
+# Kotlin Fuzzer
 Fuzzer for Kotlin compiler. Found > 65 unique bugs in `kotlinc` v1.1.4-3.  
 
 Fuzzer produced .kt files by mutating `kotlinc` test suite. If, when compiling the file, `kotlinc` threw an exception, we considered this a compiler bug.  
@@ -19,3 +19,7 @@ The list is organized so:
   - `N`, the number of files that trigger the bug, is written
   - then, some description of the bug is shown. It is a snippet from full kotlinc stacktrace (with some parts possibly omitted, so that source-specific information is deleted)
   - the following `N` lines show names of files that trigger this bug, **in ascending order of size**
+
+## How to run
+From the `fuzzer` folder, run `run_current_main.sh` to start fuzzing.  
+To update the list of bugs, run `update_all.sh.`
