@@ -29,3 +29,8 @@ git checkout minimization
 cd fuzzer
 ./minimize_verified.sh
 ```
+
+
+## Authors
+Mike Koltsov  
+Marat Akhin
