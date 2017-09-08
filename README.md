@@ -22,4 +22,15 @@ The list is organized so:
 
 ## How to run
 From the `fuzzer` folder, run `run_current_main.sh` to start fuzzing.  
-To update the list of bugs, run `update_all.sh.`
+To update the list of bugs, run `update_all.sh.`  
+To run minimization of verified tests, run  
+```
+git checkout minimization
+cd fuzzer
+./minimize_verified.sh
+```
+
+
+## Authors
+Mike Koltsov  
+Marat Akhin
