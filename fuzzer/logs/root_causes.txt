@@ -111,6 +111,13 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.types.expressions.BasicExpressionTypingVisitor.visitUnaryExpression(BasicExpressionTypingVisitor.java:728)
 	at org.jetbrains.kotlin.types.expressions.ExpressionTypingVisitorDispatcher.visitUnaryExpression(ExpressionTypingVisitorDispatcher.java:390)
 
+File inheritedPropertyInObject.kt-1023871692.kt_minimized.kt
+ROOT CAUSES
+	org.jetbrains.kotlin.util.ReenteringLazyValueComputationException
+	at org.jetbrains.kotlin.types.DeferredType.lambda$static$0(DeferredType.java:32)
+	at org.jetbrains.kotlin.storage.LockBasedStorageManager$3.recursionDetected(LockBasedStorageManager.java:166)
+	at org.jetbrains.kotlin.storage.LockBasedStorageManager$LockBasedLazyValue.invoke(LockBasedStorageManager.java:308)
+
 File callableReference.kt-1215443391.kt_minimized.kt
 ROOT CAUSES
 	Caused by: java.lang.NullPointerException
@@ -258,6 +265,13 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.types.expressions.BasicExpressionTypingVisitor.visitUnaryExpression(BasicExpressionTypingVisitor.java:728)
 	at org.jetbrains.kotlin.types.expressions.ExpressionTypingVisitorDispatcher.visitUnaryExpression(ExpressionTypingVisitorDispatcher.java:390)
 
+File specialCalls.kt1476897060.kt_minimized.kt
+ROOT CAUSES
+	Caused by: java.lang.NullPointerException
+	at org.jetbrains.kotlin.types.expressions.BasicExpressionTypingVisitor.visitExclExclExpression(BasicExpressionTypingVisitor.java:837)
+	at org.jetbrains.kotlin.types.expressions.BasicExpressionTypingVisitor.visitUnaryExpression(BasicExpressionTypingVisitor.java:728)
+	at org.jetbrains.kotlin.types.expressions.ExpressionTypingVisitorDispatcher.visitUnaryExpression(ExpressionTypingVisitorDispatcher.java:390)
+
 File constructorWithInitializer.kt1184420828.kt_minimized.kt
 ROOT CAUSES
 	Caused by: java.lang.NullPointerException
@@ -266,6 +280,13 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.types.expressions.ExpressionTypingVisitorDispatcher.visitUnaryExpression(ExpressionTypingVisitorDispatcher.java:390)
 
 File specialCalls.kt-834195982.kt_minimized.kt
+ROOT CAUSES
+	Caused by: java.lang.NullPointerException
+	at org.jetbrains.kotlin.types.expressions.BasicExpressionTypingVisitor.visitExclExclExpression(BasicExpressionTypingVisitor.java:837)
+	at org.jetbrains.kotlin.types.expressions.BasicExpressionTypingVisitor.visitUnaryExpression(BasicExpressionTypingVisitor.java:728)
+	at org.jetbrains.kotlin.types.expressions.ExpressionTypingVisitorDispatcher.visitUnaryExpression(ExpressionTypingVisitorDispatcher.java:390)
+
+File specialCalls.kt868150715.kt_minimized.kt
 ROOT CAUSES
 	Caused by: java.lang.NullPointerException
 	at org.jetbrains.kotlin.types.expressions.BasicExpressionTypingVisitor.visitExclExclExpression(BasicExpressionTypingVisitor.java:837)
@@ -733,7 +754,7 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:289)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.visitParenthesizedExpression(ExpressionCodegen.java:445)
 
-	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@63b2d5dd (ErrorType).
+	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@62556c13 (ErrorType).
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130)
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
@@ -785,6 +806,18 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.types.expressions.ControlStructureTypingVisitor.visitIfExpression(ControlStructureTypingVisitor.java:90)
 	at org.jetbrains.kotlin.types.expressions.ExpressionTypingVisitorDispatcher.visitIfExpression(ExpressionTypingVisitorDispatcher.java:286)
 
+File secondaryConstructors.kt-1066419276.kt_minimized.kt
+ROOT CAUSES
+	The root cause was thrown at: MaxStackFrameSizeAndLocalsCalculator.java:-1
+	at org.jetbrains.kotlin.codegen.MemberCodegen.genSimpleMember(MemberCodegen.java:230)
+	at org.jetbrains.kotlin.codegen.ClassBodyCodegen.generateDeclaration(ClassBodyCodegen.java:155)
+	at org.jetbrains.kotlin.codegen.ClassBodyCodegen.generateBody(ClassBodyCodegen.java:81)
+
+	Caused by: java.lang.IllegalArgumentException: Argument for @NotNull parameter 'name' of org/jetbrains/kotlin/codegen/inline/MaxStackFrameSizeAndLocalsCalculator.visitFieldInsn must not be null
+	at org.jetbrains.kotlin.codegen.inline.MaxStackFrameSizeAndLocalsCalculator.$$$reportNull$$$0(MaxStackFrameSizeAndLocalsCalculator.java)
+	at org.jetbrains.kotlin.codegen.inline.MaxStackFrameSizeAndLocalsCalculator.visitFieldInsn(MaxStackFrameSizeAndLocalsCalculator.java)
+	at org.jetbrains.org.objectweb.asm.MethodVisitor.visitFieldInsn(MethodVisitor.java:423)
+
 File throw.kt573335810.kt_minimized.kt
 ROOT CAUSES
 	The root cause was thrown at: KotlinTypeMapper.java:130
@@ -792,7 +825,7 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:289)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.visitParenthesizedExpression(ExpressionCodegen.java:445)
 
-	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@58ef4e49 (ErrorType).
+	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@21cb0a3a (ErrorType).
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130)
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
@@ -928,7 +961,7 @@ ROOT CAUSES
 
 File simpleClosure.kt1434818323.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@1920702264 new value: Snapshot(0) for CODE_BLOCK@2119954933
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@871171985 new value: Snapshot(0) for CODE_BLOCK@1077594820
 
 	Caused by: java.lang.Throwable
 
@@ -997,13 +1030,13 @@ ROOT CAUSES
 
 File booleanNotIntrinsic.kt1788411450.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@577796768 new value: Snapshot(0) for CODE_BLOCK@327825342
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@627056216 new value: Snapshot(0) for CODE_BLOCK@1279224137
 
 	Caused by: java.lang.Throwable
 
 File constructorFromTopLevelOneStringArg.kt-738725251.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@1032682661 new value: Snapshot(0) for CODE_BLOCK@996810956
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@1061019479 new value: Snapshot(0) for CODE_BLOCK@1352338454
 
 	}))("OK").result
 	at org.jetbrains.kotlin.com.intellij.openapi.diagnostic.DefaultLogger.error(DefaultLogger.java:71)
@@ -1095,7 +1128,7 @@ ROOT CAUSES
 
 File constructorFromTopLevelNoArgs.kt-1896643215.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@2062693708 new value: Snapshot(0) for CODE_BLOCK@1146646375
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@1556485638 new value: Snapshot(0) for CODE_BLOCK@1874833313
 
 	})
 	at org.jetbrains.kotlin.com.intellij.openapi.diagnostic.DefaultLogger.error(DefaultLogger.java:71)
@@ -1113,7 +1146,7 @@ ROOT CAUSES
 
 File constructorFromTopLevelOneStringArg.kt-738725251.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@1167028903 new value: Snapshot(0) for CODE_BLOCK@278996584
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@992039439 new value: Snapshot(0) for CODE_BLOCK@329681160
 
 	}))("OK").result
 	at org.jetbrains.kotlin.com.intellij.openapi.diagnostic.DefaultLogger.error(DefaultLogger.java:71)
@@ -1175,7 +1208,7 @@ ROOT CAUSES
 
 File constructor.kt1040461659.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@1153824773 new value: Snapshot(0) for CODE_BLOCK@1459383796
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@871037699 new value: Snapshot(0) for CODE_BLOCK@1804990840
 
 	Caused by: java.lang.Throwable
 
@@ -1305,14 +1338,14 @@ ROOT CAUSES
 
 File kt3414.kt-1351099902.kt_minimized.kt
 ROOT CAUSES
-	java.lang.AssertionError: No declaration for inherited open suspend fun foo(): kotlin.Int defined in Z[SimpleFunctionDescriptorImpl@19ae1ff5]
+	java.lang.AssertionError: No declaration for inherited open suspend fun foo(): kotlin.Int defined in Z[SimpleFunctionDescriptorImpl@28408846]
 	at org.jetbrains.kotlin.resolve.lazy.descriptors.LazyClassMemberScope$generateFakeOverrides$1.overrideConflict(LazyClassMemberScope.kt:397)
 	at org.jetbrains.kotlin.resolve.OverridingUtil.extractAndBindOverridesForMember(OverridingUtil.java:453)
 	at org.jetbrains.kotlin.resolve.OverridingUtil.generateOverridesInFunctionGroup(OverridingUtil.java:419)
 
 File constructorWithInitializer.kt685314879.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@1565936923 new value: Snapshot(0) for CODE_BLOCK@170423333
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@1151614298 new value: Snapshot(0) for CODE_BLOCK@2094855937
 
 	Caused by: java.lang.Throwable
 
@@ -1325,7 +1358,7 @@ ROOT CAUSES
 
 File simpleWithArg.kt-433315065.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@1920364792 new value: Snapshot(0) for CODE_BLOCK@1881854495
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@440983441 new value: Snapshot(0) for CODE_BLOCK@1132093505
 
 	Caused by: java.lang.Throwable
 
@@ -1506,7 +1539,7 @@ ROOT CAUSES
 
 File privateClassMember.kt1918446151.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@1063723635 new value: Snapshot(0) for CODE_BLOCK@1661903689
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@1629373438 new value: Snapshot(0) for CODE_BLOCK@1929357315
 
 	Caused by: java.lang.Throwable
 
@@ -1517,7 +1550,7 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genStatement(ExpressionCodegen.java:367)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:333)
 
-	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@7e67e03e (ErrorType).
+	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@2f4c6030 (ErrorType).
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130)
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
@@ -1552,7 +1585,7 @@ ROOT CAUSES
 
 File traitMember.kt1375916298.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@611472868 new value: Snapshot(0) for CODE_BLOCK@1038570882
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@165680086 new value: Snapshot(0) for CODE_BLOCK@1549497064
 
 	}))(B())
 	at org.jetbrains.kotlin.com.intellij.openapi.diagnostic.DefaultLogger.error(DefaultLogger.java:71)
@@ -1582,7 +1615,7 @@ ROOT CAUSES
 
 File equalsHashCodeToString.kt-751611194.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1999802332 new value: Snapshot(0) for CODE_BLOCK@284768642
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@416922759 new value: Snapshot(0) for CODE_BLOCK@451624187
 
 	Caused by: java.lang.Throwable
 
@@ -1602,7 +1635,7 @@ ROOT CAUSES
 
 File equalsHashCodeToString.kt-932379053.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1525749811 new value: Snapshot(0) for CODE_BLOCK@1415305842
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1136905070 new value: Snapshot(0) for CODE_BLOCK@920768688
 
 	Caused by: java.lang.Throwable
 
@@ -1673,7 +1706,7 @@ ROOT CAUSES
 
 File functionEqualsHashCode.kt554019276.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1846163984 new value: Snapshot(0) for CODE_BLOCK@936006191
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1766039761 new value: Snapshot(0) for CODE_BLOCK@211015545
 
 	Caused by: java.lang.Throwable
 
@@ -1775,7 +1808,7 @@ ROOT CAUSES
 
 File extensionFromExtension.kt-1899658960.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@25789708 new value: Snapshot(0) for CODE_BLOCK@960279260
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@2118400609 new value: Snapshot(0) for CODE_BLOCK@1063888064
 
 	}))(this, "OK")
 	at org.jetbrains.kotlin.com.intellij.openapi.diagnostic.DefaultLogger.error(DefaultLogger.java:71)
@@ -1842,7 +1875,7 @@ ROOT CAUSES
 
 File simpleWithArg.kt-433315065.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@1289540924 new value: Snapshot(0) for CODE_BLOCK@1241166305
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@1566701248 new value: Snapshot(0) for CODE_BLOCK@1308078689
 
 	Caused by: java.lang.Throwable
 
@@ -1871,6 +1904,13 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.types.expressions.BasicExpressionTypingVisitor.visitExclExclExpression(BasicExpressionTypingVisitor.java:837)
 	at org.jetbrains.kotlin.types.expressions.BasicExpressionTypingVisitor.visitUnaryExpression(BasicExpressionTypingVisitor.java:728)
 	at org.jetbrains.kotlin.types.expressions.ExpressionTypingVisitorDispatcher.visitUnaryExpression(ExpressionTypingVisitorDispatcher.java:390)
+
+File kt12200.kt1140639944.kt_minimized.kt
+ROOT CAUSES
+	org.jetbrains.kotlin.util.ReenteringLazyValueComputationException
+	at org.jetbrains.kotlin.types.DeferredType.lambda$static$0(DeferredType.java:32)
+	at org.jetbrains.kotlin.storage.LockBasedStorageManager$3.recursionDetected(LockBasedStorageManager.java:166)
+	at org.jetbrains.kotlin.storage.LockBasedStorageManager$LockBasedLazyValue.invoke(LockBasedStorageManager.java:308)
 
 File innerClassConstructor.kt-672345767.kt_minimized.kt
 ROOT CAUSES
@@ -2014,7 +2054,7 @@ ROOT CAUSES
 
 File fakeGenericCovariantOverrideWithDelegation.kt1291421651.kt_minimized.kt
 ROOT CAUSES
-	java.lang.AssertionError: No declaration for inherited open suspend fun foo(t: kotlin.Int): kotlin.String defined in Z2[SimpleFunctionDescriptorImpl@6f9b2de5]
+	java.lang.AssertionError: No declaration for inherited open suspend fun foo(t: kotlin.Int): kotlin.String defined in Z2[SimpleFunctionDescriptorImpl@7303f82c]
 	at org.jetbrains.kotlin.resolve.lazy.descriptors.LazyClassMemberScope$generateFakeOverrides$1.overrideConflict(LazyClassMemberScope.kt:397)
 	at org.jetbrains.kotlin.resolve.OverridingUtil.extractAndBindOverridesForMember(OverridingUtil.java:453)
 	at org.jetbrains.kotlin.resolve.OverridingUtil.generateOverridesInFunctionGroup(OverridingUtil.java:419)
@@ -2040,7 +2080,7 @@ ROOT CAUSES
 
 File extension.kt184425144.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@1971642096 new value: Snapshot(0) for CODE_BLOCK@2046614841
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@46129339 new value: Snapshot(0) for CODE_BLOCK@807741804
 
 	Caused by: java.lang.Throwable
 
@@ -2099,7 +2139,7 @@ ROOT CAUSES
 
 File extension.kt184425144.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@473596862 new value: Snapshot(0) for CODE_BLOCK@290599612
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@1830999811 new value: Snapshot(0) for CODE_BLOCK@737158518
 
 	Caused by: java.lang.Throwable
 
@@ -2193,7 +2233,7 @@ ROOT CAUSES
 
 File simpleClosure.kt1434818323.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(2) for CODE_BLOCK@828561731 new value: Snapshot(0) for CODE_BLOCK@644298315
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(2) for CODE_BLOCK@1510001067 new value: Snapshot(0) for CODE_BLOCK@1712107427
 
 	Caused by: java.lang.Throwable
 
@@ -2220,7 +2260,7 @@ ROOT CAUSES
 
 File topLevelFromExtension.kt-1379420388.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@1695461092 new value: Snapshot(0) for CODE_BLOCK@1248082049
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@830639576 new value: Snapshot(0) for CODE_BLOCK@1616367088
 
 	})(111, 222)
 	at org.jetbrains.kotlin.com.intellij.openapi.diagnostic.DefaultLogger.error(DefaultLogger.java:71)
@@ -2236,7 +2276,7 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:289)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:329)
 
-	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@285e2527 (ErrorType).
+	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@75782166 (ErrorType).
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130)
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
@@ -2273,13 +2313,13 @@ ROOT CAUSES
 
 File constructor.kt1040461659.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@414154176 new value: Snapshot(0) for CODE_BLOCK@1604421463
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@1034349831 new value: Snapshot(0) for CODE_BLOCK@1417884336
 
 	Caused by: java.lang.Throwable
 
 File nestedConstructorFromClass.kt2126945740.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@1810995099 new value: Snapshot(0) for CODE_BLOCK@295843641
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@209293505 new value: Snapshot(0) for CODE_BLOCK@1224761059
 
 	Caused by: java.lang.Throwable
 
@@ -2308,6 +2348,18 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.visitClassLiteralExpression(ExpressionCodegen.java:2665)
 
 File kt12738.kt1401049324.kt_minimized.kt
+ROOT CAUSES
+	java.lang.IllegalStateException: java.lang.AssertionError: No resolved call for 'in' 
+	at org.jetbrains.kotlin.codegen.CompilationErrorHandler.lambda$static$0(CompilationErrorHandler.java:24)
+	at org.jetbrains.kotlin.codegen.PackageCodegenImpl.generate(PackageCodegenImpl.java:74)
+	at org.jetbrains.kotlin.codegen.KotlinCodegenFacade.generatePackage(KotlinCodegenFacade.java:99)
+
+	Caused by: java.lang.AssertionError: No resolved call for 'in' 
+	at org.jetbrains.kotlin.resolve.calls.callUtil.CallUtilKt.getResolvedCallWithAssert(callUtil.kt:186)
+	at org.jetbrains.kotlin.codegen.RangeCodegenUtil.isPrimitiveRangeToExtension(RangeCodegenUtil.java:183)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.lambda$generateIn$18(ExpressionCodegen.java:2859)
+
+File topLevelFromExtension.kt-674079832.kt_minimized.kt
 ROOT CAUSES
 	java.lang.IllegalStateException: java.lang.AssertionError: No resolved call for 'in' 
 	at org.jetbrains.kotlin.codegen.CompilationErrorHandler.lambda$static$0(CompilationErrorHandler.java:24)
@@ -2490,7 +2542,7 @@ ROOT CAUSES
 
 File constClosureOptimization.kt-1709832008.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@1006714892 new value: Snapshot(0) for CODE_BLOCK@1389446364
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@185839302 new value: Snapshot(0) for CODE_BLOCK@646016221
 
 	Caused by: java.lang.Throwable
 
@@ -2510,7 +2562,7 @@ ROOT CAUSES
 
 File booleanNotIntrinsic.kt-1767516354.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1175088191 new value: Snapshot(0) for CODE_BLOCK@1334903905
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1958223398 new value: Snapshot(0) for CODE_BLOCK@2119226052
 
 	Caused by: java.lang.Throwable
 
@@ -2539,7 +2591,7 @@ ROOT CAUSES
 
 File propertyEqualsHashCode.kt1426795263.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1399519052 new value: Snapshot(0) for CODE_BLOCK@603848038
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@796562986 new value: Snapshot(0) for CODE_BLOCK@170029573
 
 	Caused by: java.lang.Throwable
 
@@ -2606,7 +2658,7 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:289)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.visitParenthesizedExpression(ExpressionCodegen.java:445)
 
-	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@54cedf9c (ErrorType).
+	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@67c0e7ef (ErrorType).
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130)
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
@@ -2637,7 +2689,7 @@ ROOT CAUSES
 
 File objectReceiver.kt-393751878.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@796959201 new value: Snapshot(0) for CODE_BLOCK@1654809726
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@601154052 new value: Snapshot(0) for CODE_BLOCK@1238129952
 
 	}))()
 	at org.jetbrains.kotlin.com.intellij.openapi.diagnostic.DefaultLogger.error(DefaultLogger.java:71)
@@ -2671,7 +2723,7 @@ ROOT CAUSES
 
 File classMemberFromExtension.kt1383720932.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@2065963879 new value: Snapshot(0) for CODE_BLOCK@297868937
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@1850570396 new value: Snapshot(0) for CODE_BLOCK@1006178702
 
 	}))(this, 222)
 	at org.jetbrains.kotlin.com.intellij.openapi.diagnostic.DefaultLogger.error(DefaultLogger.java:71)
@@ -2682,7 +2734,7 @@ ROOT CAUSES
 
 File callableReference.kt-1354589647.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@696828497 new value: Snapshot(0) for CODE_BLOCK@1320770222
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1004456565 new value: Snapshot(0) for CODE_BLOCK@805672754
 
 	Caused by: java.lang.Throwable
 
@@ -2804,6 +2856,18 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.types.expressions.ControlStructureTypingVisitor.visitIfExpression(ControlStructureTypingVisitor.java:90)
 	at org.jetbrains.kotlin.types.expressions.ExpressionTypingVisitorDispatcher.visitIfExpression(ExpressionTypingVisitorDispatcher.java:286)
 
+File extensionFromExtension.kt1063743179.kt_minimized.kt
+ROOT CAUSES
+	java.lang.IllegalStateException: java.lang.AssertionError: No resolved call for 'in' 
+	at org.jetbrains.kotlin.codegen.CompilationErrorHandler.lambda$static$0(CompilationErrorHandler.java:24)
+	at org.jetbrains.kotlin.codegen.PackageCodegenImpl.generate(PackageCodegenImpl.java:74)
+	at org.jetbrains.kotlin.codegen.KotlinCodegenFacade.generatePackage(KotlinCodegenFacade.java:99)
+
+	Caused by: java.lang.AssertionError: No resolved call for 'in' 
+	at org.jetbrains.kotlin.resolve.calls.callUtil.CallUtilKt.getResolvedCallWithAssert(callUtil.kt:186)
+	at org.jetbrains.kotlin.codegen.RangeCodegenUtil.isPrimitiveRangeToExtension(RangeCodegenUtil.java:183)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.lambda$generateIn$18(ExpressionCodegen.java:2859)
+
 File privateClass.kt-170283837.kt
 ROOT CAUSES
 	The root cause was thrown at: KotlinTypeMapper.java:130
@@ -2889,6 +2953,13 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.types.expressions.ControlStructureTypingVisitor.visitIfExpression(ControlStructureTypingVisitor.java:90)
 	at org.jetbrains.kotlin.types.expressions.ExpressionTypingVisitorDispatcher.visitIfExpression(ExpressionTypingVisitorDispatcher.java:286)
 
+File kt3414.kt167770255.kt_minimized.kt
+ROOT CAUSES
+	java.lang.AssertionError: No declaration for inherited open operator infix inline tailrec suspend fun foo(): kotlin.Int defined in Z[SimpleFunctionDescriptorImpl@2e3ef78]
+	at org.jetbrains.kotlin.resolve.lazy.descriptors.LazyClassMemberScope$generateFakeOverrides$1.overrideConflict(LazyClassMemberScope.kt:397)
+	at org.jetbrains.kotlin.resolve.OverridingUtil.extractAndBindOverridesForMember(OverridingUtil.java:453)
+	at org.jetbrains.kotlin.resolve.OverridingUtil.generateOverridesInFunctionGroup(OverridingUtil.java:419)
+
 File simpleVal.kt-2075536304.kt
 ROOT CAUSES
 	The root cause was thrown at: TransformationMethodVisitor.java:88
@@ -2951,7 +3022,7 @@ ROOT CAUSES
 
 File objectReceiver.kt-393751878.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@1530921356 new value: Snapshot(0) for CODE_BLOCK@1872367768
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@276476307 new value: Snapshot(0) for CODE_BLOCK@1324135812
 
 	}))()
 	at org.jetbrains.kotlin.com.intellij.openapi.diagnostic.DefaultLogger.error(DefaultLogger.java:71)
@@ -2962,7 +3033,7 @@ ROOT CAUSES
 
 File privateClassMember.kt1918446151.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@1358948158 new value: Snapshot(0) for CODE_BLOCK@1823304645
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@686910085 new value: Snapshot(0) for CODE_BLOCK@1693361027
 
 	Caused by: java.lang.Throwable
 
@@ -2987,7 +3058,7 @@ ROOT CAUSES
 
 File constructorFromTopLevelNoArgs.kt-1896643215.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@824528931 new value: Snapshot(0) for CODE_BLOCK@423408162
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@1970767515 new value: Snapshot(0) for CODE_BLOCK@409258741
 
 	})
 	at org.jetbrains.kotlin.com.intellij.openapi.diagnostic.DefaultLogger.error(DefaultLogger.java:71)
@@ -3031,7 +3102,7 @@ ROOT CAUSES
 
 File innerConstructorFromClass.kt1493067669.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@1623523064 new value: Snapshot(0) for CODE_BLOCK@2138191155
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@1832525522 new value: Snapshot(0) for CODE_BLOCK@47776756
 
 	Caused by: java.lang.Throwable
 
@@ -3143,7 +3214,7 @@ ROOT CAUSES
 
 File kt15446.kt-834666362.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@767436306 new value: Snapshot(0) for CODE_BLOCK@660751096
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@1824431796 new value: Snapshot(0) for CODE_BLOCK@1408516289
 
 	Caused by: java.lang.Throwable
 
@@ -3198,7 +3269,7 @@ ROOT CAUSES
 
 File abstractClassMember.kt655742060.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@1202971494 new value: Snapshot(0) for CODE_BLOCK@1374297161
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@258955517 new value: Snapshot(0) for CODE_BLOCK@1289379763
 
 	}))(B())
 	at org.jetbrains.kotlin.com.intellij.openapi.diagnostic.DefaultLogger.error(DefaultLogger.java:71)
@@ -3251,9 +3322,21 @@ ROOT CAUSES
 
 File inlineReifiedFun.kt280870791.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1502733280 new value: Snapshot(0) for CODE_BLOCK@1079010575
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@800635926 new value: Snapshot(0) for CODE_BLOCK@918059241
 
 	Caused by: java.lang.Throwable
+
+File callableReference.kt472259302.kt_minimized.kt
+ROOT CAUSES
+	The root cause was thrown at: callUtil.kt:186
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:323)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genStatement(ExpressionCodegen.java:367)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.generateBlock(ExpressionCodegen.java:1221)
+
+	Caused by: java.lang.AssertionError: No resolved call for 'in' 
+	at org.jetbrains.kotlin.resolve.calls.callUtil.CallUtilKt.getResolvedCallWithAssert(callUtil.kt:186)
+	at org.jetbrains.kotlin.codegen.RangeCodegenUtil.isPrimitiveRangeToExtension(RangeCodegenUtil.java:183)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.lambda$generateIn$18(ExpressionCodegen.java:2859)
 
 File unit.kt-687248556.kt_minimized.kt
 ROOT CAUSES
@@ -3301,7 +3384,7 @@ ROOT CAUSES
 
 File functionFromStdlib.kt-1228810117.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1723075455 new value: Snapshot(0) for CODE_BLOCK@275360428
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@820643921 new value: Snapshot(0) for CODE_BLOCK@1995483293
 
 	Caused by: java.lang.Throwable
 
@@ -3352,7 +3435,7 @@ ROOT CAUSES
 
 File innerConstructorFromExtension.kt451431432.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@1256239109 new value: Snapshot(0) for CODE_BLOCK@2025392591
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@120514700 new value: Snapshot(0) for CODE_BLOCK@1788077488
 
 	}))(this).k
 	at org.jetbrains.kotlin.com.intellij.openapi.diagnostic.DefaultLogger.error(DefaultLogger.java:71)
@@ -3368,6 +3451,18 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.types.expressions.ControlStructureTypingVisitor.visitIfExpression(ControlStructureTypingVisitor.java:90)
 	at org.jetbrains.kotlin.types.expressions.ExpressionTypingVisitorDispatcher.visitIfExpression(ExpressionTypingVisitorDispatcher.java:286)
 
+File classMemberFromExtension.kt-1611700464.kt_minimized.kt
+ROOT CAUSES
+	java.lang.IllegalStateException: java.lang.AssertionError: No resolved call for 'in' 
+	at org.jetbrains.kotlin.codegen.CompilationErrorHandler.lambda$static$0(CompilationErrorHandler.java:24)
+	at org.jetbrains.kotlin.codegen.PackageCodegenImpl.generate(PackageCodegenImpl.java:74)
+	at org.jetbrains.kotlin.codegen.KotlinCodegenFacade.generatePackage(KotlinCodegenFacade.java:99)
+
+	Caused by: java.lang.AssertionError: No resolved call for 'in' 
+	at org.jetbrains.kotlin.resolve.calls.callUtil.CallUtilKt.getResolvedCallWithAssert(callUtil.kt:186)
+	at org.jetbrains.kotlin.codegen.RangeCodegenUtil.isPrimitiveRangeToExtension(RangeCodegenUtil.java:183)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.lambda$generateIn$18(ExpressionCodegen.java:2859)
+
 File overriddenInSubclass.kt1687525707.kt
 ROOT CAUSES
 	The root cause was thrown at: KotlinTypeMapper.java:130
@@ -3382,7 +3477,7 @@ ROOT CAUSES
 
 File extensionToLocalClass.kt-471007721.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@2142500311 new value: Snapshot(0) for CODE_BLOCK@624852045
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1464415795 new value: Snapshot(0) for CODE_BLOCK@1917384108
 
 	Caused by: java.lang.Throwable
 
@@ -3411,6 +3506,18 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.types.expressions.ControlStructureTypingVisitor.visitIfExpression(ControlStructureTypingVisitor.java:145)
 	at org.jetbrains.kotlin.types.expressions.ControlStructureTypingVisitor.visitIfExpression(ControlStructureTypingVisitor.java:90)
 	at org.jetbrains.kotlin.types.expressions.ExpressionTypingVisitorDispatcher.visitIfExpression(ExpressionTypingVisitorDispatcher.java:286)
+
+File constructorWithInitializer.kt-1786178393.kt_minimized.kt
+ROOT CAUSES
+	java.lang.IllegalStateException: java.lang.AssertionError: No resolved call for '!in' 
+	at org.jetbrains.kotlin.codegen.CompilationErrorHandler.lambda$static$0(CompilationErrorHandler.java:24)
+	at org.jetbrains.kotlin.codegen.PackageCodegenImpl.generate(PackageCodegenImpl.java:74)
+	at org.jetbrains.kotlin.codegen.KotlinCodegenFacade.generatePackage(KotlinCodegenFacade.java:99)
+
+	Caused by: java.lang.AssertionError: No resolved call for '!in' 
+	at org.jetbrains.kotlin.resolve.calls.callUtil.CallUtilKt.getResolvedCallWithAssert(callUtil.kt:186)
+	at org.jetbrains.kotlin.codegen.RangeCodegenUtil.isPrimitiveRangeToExtension(RangeCodegenUtil.java:183)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.lambda$generateIn$18(ExpressionCodegen.java:2859)
 
 File classMemberFromTopLevelUnitNoArgs.kt-1182195470.kt
 ROOT CAUSES
@@ -3665,9 +3772,21 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.optimization.fixStack.FixStackAnalyzer$InternalAnalyzer$FixStackFrame.pop(FixStackAnalyzer.kt:149)
 	at org.jetbrains.kotlin.codegen.optimization.fixStack.FixStackAnalyzer$InternalAnalyzer$FixStackFrame.pop(FixStackAnalyzer.kt:88)
 
+File propertyGetterAndGetFunctionDifferentReturnType.kt-267455788.kt_minimized.kt
+ROOT CAUSES
+	java.lang.IllegalStateException: java.lang.AssertionError: No resolved call for 'in' 
+	at org.jetbrains.kotlin.codegen.CompilationErrorHandler.lambda$static$0(CompilationErrorHandler.java:24)
+	at org.jetbrains.kotlin.codegen.PackageCodegenImpl.generate(PackageCodegenImpl.java:74)
+	at org.jetbrains.kotlin.codegen.KotlinCodegenFacade.generatePackage(KotlinCodegenFacade.java:99)
+
+	Caused by: java.lang.AssertionError: No resolved call for 'in' 
+	at org.jetbrains.kotlin.resolve.calls.callUtil.CallUtilKt.getResolvedCallWithAssert(callUtil.kt:186)
+	at org.jetbrains.kotlin.codegen.RangeCodegenUtil.isPrimitiveRangeToExtension(RangeCodegenUtil.java:183)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.lambda$generateIn$18(ExpressionCodegen.java:2859)
+
 File returnUnit.kt-2143020508.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@130322052 new value: Snapshot(0) for CODE_BLOCK@1445375532
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1373040471 new value: Snapshot(0) for CODE_BLOCK@1696366065
 
 	Caused by: java.lang.Throwable
 
@@ -3678,7 +3797,7 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genStatement(ExpressionCodegen.java:367)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:333)
 
-	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@1a367a6d (ErrorType).
+	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@676a29de (ErrorType).
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130)
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
@@ -3713,7 +3832,7 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:289)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:329)
 
-	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@62368359 (ErrorType).
+	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@31392265 (ErrorType).
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130)
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
@@ -3765,9 +3884,21 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.RangeCodegenUtil.isPrimitiveRangeToExtension(RangeCodegenUtil.java:183)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.lambda$generateIn$18(ExpressionCodegen.java:2859)
 
+File withNonLocalReturn.kt-839663004.kt_minimized.kt
+ROOT CAUSES
+	The root cause was thrown at: MaxStackFrameSizeAndLocalsCalculator.java:-1
+	at org.jetbrains.kotlin.codegen.MemberCodegen.genSimpleMember(MemberCodegen.java:230)
+	at org.jetbrains.kotlin.codegen.ClassBodyCodegen.generateDeclaration(ClassBodyCodegen.java:155)
+	at org.jetbrains.kotlin.codegen.ClassBodyCodegen.generateBody(ClassBodyCodegen.java:81)
+
+	Caused by: java.lang.IllegalArgumentException: Argument for @NotNull parameter 'name' of org/jetbrains/kotlin/codegen/inline/MaxStackFrameSizeAndLocalsCalculator.visitFieldInsn must not be null
+	at org.jetbrains.kotlin.codegen.inline.MaxStackFrameSizeAndLocalsCalculator.$$$reportNull$$$0(MaxStackFrameSizeAndLocalsCalculator.java)
+	at org.jetbrains.kotlin.codegen.inline.MaxStackFrameSizeAndLocalsCalculator.visitFieldInsn(MaxStackFrameSizeAndLocalsCalculator.java)
+	at org.jetbrains.org.objectweb.asm.MethodVisitor.visitFieldInsn(MethodVisitor.java:423)
+
 File extensionFromExtension.kt-1899658960.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@1977303230 new value: Snapshot(0) for CODE_BLOCK@2128073862
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@1993994116 new value: Snapshot(0) for CODE_BLOCK@1345114286
 
 	}))(this, "OK")
 	at org.jetbrains.kotlin.com.intellij.openapi.diagnostic.DefaultLogger.error(DefaultLogger.java:71)
@@ -3785,7 +3916,7 @@ ROOT CAUSES
 
 File constClosureOptimization.kt-1709832008.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@1543236708 new value: Snapshot(0) for CODE_BLOCK@175272316
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@239350828 new value: Snapshot(0) for CODE_BLOCK@1819127656
 
 	Caused by: java.lang.Throwable
 
@@ -3854,7 +3985,7 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:289)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:329)
 
-	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@605c96b (ErrorType).
+	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@380f2df7 (ErrorType).
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130)
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
@@ -3948,6 +4079,13 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.optimization.fixStack.FixStackAnalyzer$InternalAnalyzer$FixStackFrame.pop(FixStackAnalyzer.kt:149)
 	at org.jetbrains.kotlin.codegen.optimization.fixStack.FixStackAnalyzer$InternalAnalyzer$FixStackFrame.pop(FixStackAnalyzer.kt:88)
 
+File fakeGenericCovariantOverrideWithDelegation.kt326423031.kt_minimized.kt
+ROOT CAUSES
+	java.lang.AssertionError: No declaration for inherited open operator infix inline tailrec suspend fun foo(t: kotlin.Int): kotlin.String defined in Z2[SimpleFunctionDescriptorImpl@4cfe291d]
+	at org.jetbrains.kotlin.resolve.lazy.descriptors.LazyClassMemberScope$generateFakeOverrides$1.overrideConflict(LazyClassMemberScope.kt:397)
+	at org.jetbrains.kotlin.resolve.OverridingUtil.extractAndBindOverridesForMember(OverridingUtil.java:453)
+	at org.jetbrains.kotlin.resolve.OverridingUtil.generateOverridesInFunctionGroup(OverridingUtil.java:419)
+
 File severalInlines.kt1124260158.kt_minimized.kt
 ROOT CAUSES
 	java.lang.IllegalStateException: it must not be null
@@ -4018,7 +4156,7 @@ ROOT CAUSES
 
 File genericMember.kt609663007.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@1127286985 new value: Snapshot(0) for CODE_BLOCK@565851040
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@40162929 new value: Snapshot(0) for CODE_BLOCK@1619937258
 
 	})(A("OK"))
 	at org.jetbrains.kotlin.com.intellij.openapi.diagnostic.DefaultLogger.error(DefaultLogger.java:71)
@@ -4134,7 +4272,7 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:289)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.visitParenthesizedExpression(ExpressionCodegen.java:445)
 
-	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@5c59cb7a (ErrorType).
+	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@3e6ac692 (ErrorType).
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130)
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
@@ -4174,7 +4312,7 @@ ROOT CAUSES
 
 File companionObjectReceiver.kt734822199.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@244022482 new value: Snapshot(0) for CODE_BLOCK@1623635844
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@1937469623 new value: Snapshot(0) for CODE_BLOCK@583639474
 
 	})()
 	at org.jetbrains.kotlin.com.intellij.openapi.diagnostic.DefaultLogger.error(DefaultLogger.java:71)
@@ -4215,7 +4353,7 @@ ROOT CAUSES
 
 File invokePropertyReference.kt766765282.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@2110933653 new value: Snapshot(0) for CODE_BLOCK@1129834402
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@233895701 new value: Snapshot(0) for CODE_BLOCK@717695727
 
 	Caused by: java.lang.Throwable
 
@@ -4273,10 +4411,22 @@ ROOT CAUSES
 
 File falseSmartCast.kt-117076066.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewriting key Int?: Ext {public final fun kotlin.Int?.bar(): kotlin.String defined in SuperFoo[SimpleFunctionDescriptorImpl@d7fbbc]} for implicit smart cast on baz: was Int, now Foo
+	Caused by: java.lang.AssertionError: Rewriting key Int?: Ext {public final fun kotlin.Int?.bar(): kotlin.String defined in SuperFoo[SimpleFunctionDescriptorImpl@1a8430e0]} for implicit smart cast on baz: was Int, now Foo
 	at org.jetbrains.kotlin.resolve.calls.smartcasts.SmartCastManager$Companion.checkAndRecordPossibleCast(SmartCastManager.kt:177)
 	at org.jetbrains.kotlin.resolve.calls.CandidateResolver.checkReceiver(CandidateResolver.kt:554)
 	at org.jetbrains.kotlin.resolve.calls.CandidateResolver.checkReceivers(CandidateResolver.kt:473)
+
+File nestedConstructorFromClass.kt1887128534.kt_minimized.kt
+ROOT CAUSES
+	java.lang.IllegalStateException: java.lang.AssertionError: No resolved call for 'in' 
+	at org.jetbrains.kotlin.codegen.CompilationErrorHandler.lambda$static$0(CompilationErrorHandler.java:24)
+	at org.jetbrains.kotlin.codegen.PackageCodegenImpl.generate(PackageCodegenImpl.java:74)
+	at org.jetbrains.kotlin.codegen.KotlinCodegenFacade.generatePackage(KotlinCodegenFacade.java:99)
+
+	Caused by: java.lang.AssertionError: No resolved call for 'in' 
+	at org.jetbrains.kotlin.resolve.calls.callUtil.CallUtilKt.getResolvedCallWithAssert(callUtil.kt:186)
+	at org.jetbrains.kotlin.codegen.RangeCodegenUtil.isPrimitiveRangeToExtension(RangeCodegenUtil.java:183)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.lambda$generateIn$18(ExpressionCodegen.java:2859)
 
 File array.kt-1745348743.kt
 ROOT CAUSES
@@ -4397,7 +4547,7 @@ ROOT CAUSES
 
 File companionObjectReceiver.kt734822199.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@787356544 new value: Snapshot(0) for CODE_BLOCK@1642166519
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@629329753 new value: Snapshot(0) for CODE_BLOCK@1777802159
 
 	})()
 	at org.jetbrains.kotlin.com.intellij.openapi.diagnostic.DefaultLogger.error(DefaultLogger.java:71)
@@ -4431,13 +4581,13 @@ ROOT CAUSES
 
 File javaCollectionsStaticMethod.kt1560649397.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@49228716 new value: Snapshot(0) for CODE_BLOCK@2143545452
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@202773466 new value: Snapshot(0) for CODE_BLOCK@189369065
 
 	Caused by: java.lang.Throwable
 
 File propertyInstanceof.kt-172268193.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@969564299 new value: Snapshot(0) for CODE_BLOCK@744587166
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@2086829483 new value: Snapshot(0) for CODE_BLOCK@2086076543
 
 	Caused by: java.lang.Throwable
 
@@ -4450,7 +4600,7 @@ ROOT CAUSES
 
 File constructorWithInitializer.kt685314879.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@2081993122 new value: Snapshot(0) for CODE_BLOCK@1564472240
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@1487820437 new value: Snapshot(0) for CODE_BLOCK@2079736064
 
 	Caused by: java.lang.Throwable
 
@@ -4527,7 +4677,7 @@ ROOT CAUSES
 
 File genericMember.kt609663007.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@681466849 new value: Snapshot(0) for CODE_BLOCK@1501841318
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@1020780366 new value: Snapshot(0) for CODE_BLOCK@1982569653
 
 	})(A("OK"))
 	at org.jetbrains.kotlin.com.intellij.openapi.diagnostic.DefaultLogger.error(DefaultLogger.java:71)
@@ -4619,7 +4769,7 @@ ROOT CAUSES
 
 File jvmErasureOfClass.kt-2032341324.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@871551885 new value: Snapshot(0) for CODE_BLOCK@678803045
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1450802105 new value: Snapshot(0) for CODE_BLOCK@952045792
 
 	Caused by: java.lang.Throwable
 
@@ -4679,7 +4829,7 @@ ROOT CAUSES
 
 File innerClassConstructor.kt1261735938.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@401998152 new value: Snapshot(0) for CODE_BLOCK@949025536
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@393484587 new value: Snapshot(0) for CODE_BLOCK@1172475930
 
 	Caused by: java.lang.Throwable
 
@@ -4692,7 +4842,7 @@ ROOT CAUSES
 
 File accessorNames.kt1408005473.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1046977241 new value: Snapshot(0) for CODE_BLOCK@1556301540
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1227456922 new value: Snapshot(0) for CODE_BLOCK@862645169
 
 	Caused by: java.lang.Throwable
 
@@ -4780,7 +4930,7 @@ ROOT CAUSES
 
 File floatingPointParameters.kt-1592337109.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1667488955 new value: Snapshot(0) for CODE_BLOCK@1474207458
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1370312248 new value: Snapshot(0) for CODE_BLOCK@39731730
 
 	Caused by: java.lang.Throwable
 
@@ -4800,7 +4950,7 @@ ROOT CAUSES
 
 File traitMember.kt1375916298.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@799289993 new value: Snapshot(0) for CODE_BLOCK@234464865
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@538312807 new value: Snapshot(0) for CODE_BLOCK@327907055
 
 	}))(B())
 	at org.jetbrains.kotlin.com.intellij.openapi.diagnostic.DefaultLogger.error(DefaultLogger.java:71)
@@ -4808,6 +4958,18 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.util.slicedMap.Slices$1.processRewrite(Slices.java:40)
 
 	Caused by: java.lang.Throwable
+
+File innerConstructorFromClass.kt556353244.kt_minimized.kt
+ROOT CAUSES
+	java.lang.IllegalStateException: java.lang.AssertionError: No resolved call for 'in' 
+	at org.jetbrains.kotlin.codegen.CompilationErrorHandler.lambda$static$0(CompilationErrorHandler.java:24)
+	at org.jetbrains.kotlin.codegen.PackageCodegenImpl.generate(PackageCodegenImpl.java:74)
+	at org.jetbrains.kotlin.codegen.KotlinCodegenFacade.generatePackage(KotlinCodegenFacade.java:99)
+
+	Caused by: java.lang.AssertionError: No resolved call for 'in' 
+	at org.jetbrains.kotlin.resolve.calls.callUtil.CallUtilKt.getResolvedCallWithAssert(callUtil.kt:186)
+	at org.jetbrains.kotlin.codegen.RangeCodegenUtil.isPrimitiveRangeToExtension(RangeCodegenUtil.java:183)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.lambda$generateIn$18(ExpressionCodegen.java:2859)
 
 File captureThisAndReceiver.kt1084525142.kt_minimized.kt
 ROOT CAUSES
@@ -4834,7 +4996,7 @@ ROOT CAUSES
 
 File ordinaryMethodIsInvokedWhenNoDefaultValuesAreUsed.kt1196254124.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@934006537 new value: Snapshot(0) for CODE_BLOCK@1977381463
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@179488154 new value: Snapshot(0) for CODE_BLOCK@749433556
 
 	Caused by: java.lang.Throwable
 
@@ -4934,7 +5096,7 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:289)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.visitParenthesizedExpression(ExpressionCodegen.java:445)
 
-	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@1396f3ad (ErrorType).
+	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@1959af7f (ErrorType).
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130)
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
@@ -4971,7 +5133,7 @@ ROOT CAUSES
 
 File innerConstructorFromTopLevelNoArgs.kt-1917926333.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1432562539 new value: Snapshot(0) for CODE_BLOCK@67773315
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@895306143 new value: Snapshot(0) for CODE_BLOCK@1246318728
 
 	Caused by: java.lang.Throwable
 
@@ -5019,9 +5181,21 @@ ROOT CAUSES
 
 File unit.kt470935645.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1401120129 new value: Snapshot(0) for CODE_BLOCK@873486507
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1694116413 new value: Snapshot(0) for CODE_BLOCK@669141237
 
 	Caused by: java.lang.Throwable
+
+File typeProjection.kt2132536573.kt_minimized.kt
+ROOT CAUSES
+	The root cause was thrown at: callUtil.kt:186
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:323)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genStatement(ExpressionCodegen.java:367)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.generateBlock(ExpressionCodegen.java:1221)
+
+	Caused by: java.lang.AssertionError: No resolved call for '!in' 
+	at org.jetbrains.kotlin.resolve.calls.callUtil.CallUtilKt.getResolvedCallWithAssert(callUtil.kt:186)
+	at org.jetbrains.kotlin.codegen.RangeCodegenUtil.isPrimitiveRangeToExtension(RangeCodegenUtil.java:183)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.lambda$generateIn$18(ExpressionCodegen.java:2859)
 
 File traitImplMethodWithClassReceiver.kt-382919960.kt
 ROOT CAUSES
@@ -5059,9 +5233,21 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
 
+File kt4252_2.kt-461468692.kt_minimized.kt
+ROOT CAUSES
+	The root cause was thrown at: MaxStackFrameSizeAndLocalsCalculator.java:-1
+	at org.jetbrains.kotlin.codegen.MemberCodegen.genSimpleMember(MemberCodegen.java:230)
+	at org.jetbrains.kotlin.codegen.ClassBodyCodegen.generateDeclaration(ClassBodyCodegen.java:155)
+	at org.jetbrains.kotlin.codegen.ClassBodyCodegen.generateBody(ClassBodyCodegen.java:81)
+
+	Caused by: java.lang.IllegalArgumentException: Argument for @NotNull parameter 'name' of org/jetbrains/kotlin/codegen/inline/MaxStackFrameSizeAndLocalsCalculator.visitFieldInsn must not be null
+	at org.jetbrains.kotlin.codegen.inline.MaxStackFrameSizeAndLocalsCalculator.$$$reportNull$$$0(MaxStackFrameSizeAndLocalsCalculator.java)
+	at org.jetbrains.kotlin.codegen.inline.MaxStackFrameSizeAndLocalsCalculator.visitFieldInsn(MaxStackFrameSizeAndLocalsCalculator.java)
+	at org.jetbrains.org.objectweb.asm.MethodVisitor.visitFieldInsn(MethodVisitor.java:423)
+
 File overrideAnyWithPrimitive.kt1407678345.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1557980805 new value: Snapshot(0) for CODE_BLOCK@999267958
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@587519765 new value: Snapshot(0) for CODE_BLOCK@1772574736
 
 	Caused by: java.lang.Throwable
 
@@ -5078,6 +5264,18 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:323)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genStatement(ExpressionCodegen.java:367)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.generateBlock(ExpressionCodegen.java:1221)
+
+	Caused by: java.lang.AssertionError: No resolved call for 'in' 
+	at org.jetbrains.kotlin.resolve.calls.callUtil.CallUtilKt.getResolvedCallWithAssert(callUtil.kt:186)
+	at org.jetbrains.kotlin.codegen.RangeCodegenUtil.isPrimitiveRangeToExtension(RangeCodegenUtil.java:183)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.lambda$generateIn$18(ExpressionCodegen.java:2859)
+
+File innerConstructorFromExtension.kt-896045371.kt_minimized.kt
+ROOT CAUSES
+	java.lang.IllegalStateException: java.lang.AssertionError: No resolved call for 'in' 
+	at org.jetbrains.kotlin.codegen.CompilationErrorHandler.lambda$static$0(CompilationErrorHandler.java:24)
+	at org.jetbrains.kotlin.codegen.PackageCodegenImpl.generate(PackageCodegenImpl.java:74)
+	at org.jetbrains.kotlin.codegen.KotlinCodegenFacade.generatePackage(KotlinCodegenFacade.java:99)
 
 	Caused by: java.lang.AssertionError: No resolved call for 'in' 
 	at org.jetbrains.kotlin.resolve.calls.callUtil.CallUtilKt.getResolvedCallWithAssert(callUtil.kt:186)
@@ -5245,6 +5443,18 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.types.expressions.BasicExpressionTypingVisitor.visitUnaryExpression(BasicExpressionTypingVisitor.java:728)
 	at org.jetbrains.kotlin.types.expressions.ExpressionTypingVisitorDispatcher.visitUnaryExpression(ExpressionTypingVisitorDispatcher.java:390)
 
+File nullValue.kt2064920538.kt_minimized.kt
+ROOT CAUSES
+	The root cause was thrown at: callUtil.kt:186
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:323)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genStatement(ExpressionCodegen.java:367)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:333)
+
+	Caused by: java.lang.AssertionError: No resolved call for '!in' 
+	at org.jetbrains.kotlin.resolve.calls.callUtil.CallUtilKt.getResolvedCallWithAssert(callUtil.kt:186)
+	at org.jetbrains.kotlin.codegen.RangeCodegenUtil.isPrimitiveRangeToExtension(RangeCodegenUtil.java:183)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.lambda$generateIn$18(ExpressionCodegen.java:2859)
+
 File kt3573.kt1827372457.kt
 ROOT CAUSES
 	The root cause was thrown at: TransformationMethodVisitor.java:88
@@ -5270,7 +5480,7 @@ ROOT CAUSES
 
 File callableReference.kt-1354589647.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1032193995 new value: Snapshot(0) for CODE_BLOCK@371000722
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@821068184 new value: Snapshot(0) for CODE_BLOCK@994660089
 
 	Caused by: java.lang.Throwable
 
@@ -5299,7 +5509,7 @@ ROOT CAUSES
 
 File typeEqualsHashCode.kt235036096.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1480603679 new value: Snapshot(0) for CODE_BLOCK@1369807143
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1988949068 new value: Snapshot(0) for CODE_BLOCK@378302979
 
 	Caused by: java.lang.Throwable
 
@@ -5317,13 +5527,13 @@ ROOT CAUSES
 
 File extensionToPrimitive.kt-1087681930.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@1722281680 new value: Snapshot(0) for CODE_BLOCK@363619486
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@519145325 new value: Snapshot(0) for CODE_BLOCK@227332833
 
 	Caused by: java.lang.Throwable
 
 File abstractClassMember.kt655742060.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@1822585309 new value: Snapshot(0) for CODE_BLOCK@1513805744
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@1775700119 new value: Snapshot(0) for CODE_BLOCK@1927839103
 
 	}))(B())
 	at org.jetbrains.kotlin.com.intellij.openapi.diagnostic.DefaultLogger.error(DefaultLogger.java:71)
@@ -5346,14 +5556,14 @@ ROOT CAUSES
 
 File delegation3.kt-2141195578.kt_minimized.kt
 ROOT CAUSES
-	java.lang.AssertionError: No declaration for inherited open suspend fun foo(): kotlin.Int defined in Test2[SimpleFunctionDescriptorImpl@75a68d60]
+	java.lang.AssertionError: No declaration for inherited open suspend fun foo(): kotlin.Int defined in Test2[SimpleFunctionDescriptorImpl@701d1656]
 	at org.jetbrains.kotlin.resolve.lazy.descriptors.LazyClassMemberScope$generateFakeOverrides$1.overrideConflict(LazyClassMemberScope.kt:397)
 	at org.jetbrains.kotlin.resolve.OverridingUtil.extractAndBindOverridesForMember(OverridingUtil.java:453)
 	at org.jetbrains.kotlin.resolve.OverridingUtil.generateOverridesInFunctionGroup(OverridingUtil.java:419)
 
 File kinds.kt-373360278.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1086572888 new value: Snapshot(0) for CODE_BLOCK@1405113281
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1799900199 new value: Snapshot(0) for CODE_BLOCK@1813421962
 
 	Caused by: java.lang.Throwable
 
@@ -5389,7 +5599,7 @@ ROOT CAUSES
 
 File propertyAccessors.kt-1475947596.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1179431802 new value: Snapshot(0) for CODE_BLOCK@1370853897
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1604263984 new value: Snapshot(0) for CODE_BLOCK@2125074879
 
 	Caused by: java.lang.Throwable
 
@@ -5464,6 +5674,25 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
 
+File privateClassMember.kt-833234655.kt_minimized.kt
+ROOT CAUSES
+	Caused by: java.lang.NullPointerException
+	at org.jetbrains.kotlin.types.expressions.BasicExpressionTypingVisitor.visitExclExclExpression(BasicExpressionTypingVisitor.java:837)
+	at org.jetbrains.kotlin.types.expressions.BasicExpressionTypingVisitor.visitUnaryExpression(BasicExpressionTypingVisitor.java:728)
+	at org.jetbrains.kotlin.types.expressions.ExpressionTypingVisitorDispatcher.visitUnaryExpression(ExpressionTypingVisitorDispatcher.java:390)
+
+File nonDefaultParameterOmitted.kt-178829523.kt_minimized.kt
+ROOT CAUSES
+	The root cause was thrown at: callUtil.kt:186
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:323)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genStatement(ExpressionCodegen.java:367)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:333)
+
+	Caused by: java.lang.AssertionError: No resolved call for 'in' 
+	at org.jetbrains.kotlin.resolve.calls.callUtil.CallUtilKt.getResolvedCallWithAssert(callUtil.kt:186)
+	at org.jetbrains.kotlin.codegen.RangeCodegenUtil.isPrimitiveRangeToExtension(RangeCodegenUtil.java:183)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.lambda$generateIn$18(ExpressionCodegen.java:2859)
+
 File accessViaSubclass.kt-1546156912.kt
 ROOT CAUSES
 	java.lang.IllegalStateException: java.lang.AssertionError: No resolved call for 'in' 
@@ -5483,7 +5712,7 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:289)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:329)
 
-	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@24e2824a (ErrorType).
+	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@4da20ef4 (ErrorType).
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130)
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
@@ -5580,13 +5809,13 @@ ROOT CAUSES
 
 File localFunctionName.kt-1253414994.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@1628424716 new value: Snapshot(0) for CODE_BLOCK@1912233536
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@974678658 new value: Snapshot(0) for CODE_BLOCK@709538740
 
 	Caused by: java.lang.Throwable
 
 File genericValOnLHS.kt1887003830.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1883507887 new value: Snapshot(0) for CODE_BLOCK@930980531
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1924874711 new value: Snapshot(0) for CODE_BLOCK@58570413
 
 	Caused by: java.lang.Throwable
 
@@ -5606,7 +5835,7 @@ ROOT CAUSES
 
 File isOptional.kt-258774014.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1588131558 new value: Snapshot(0) for CODE_BLOCK@1909571144
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1158747124 new value: Snapshot(0) for CODE_BLOCK@1196652489
 
 	Caused by: java.lang.Throwable
 
@@ -5638,7 +5867,7 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genStatement(ExpressionCodegen.java:367)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:333)
 
-	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@788c0052 (ErrorType).
+	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@42270893 (ErrorType).
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130)
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
@@ -5682,7 +5911,7 @@ ROOT CAUSES
 
 File genericOverriddenFunction.kt-1561358391.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1983044521 new value: Snapshot(0) for CODE_BLOCK@1040859150
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1566507620 new value: Snapshot(0) for CODE_BLOCK@1065753124
 
 	Caused by: java.lang.Throwable
 
@@ -5711,7 +5940,7 @@ ROOT CAUSES
 
 File extensionToPrimitive.kt-1087681930.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@524125184 new value: Snapshot(0) for CODE_BLOCK@254652430
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@1353088805 new value: Snapshot(0) for CODE_BLOCK@746814447
 
 	Caused by: java.lang.Throwable
 
@@ -5745,7 +5974,7 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:289)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.visitParenthesizedExpression(ExpressionCodegen.java:445)
 
-	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@7c3821d3 (ErrorType).
+	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@5095e3a2 (ErrorType).
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130)
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
@@ -5766,7 +5995,7 @@ ROOT CAUSES
 
 File genericOverriddenProperty.kt-1818173800.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@666239703 new value: Snapshot(0) for CODE_BLOCK@516108214
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@289619189 new value: Snapshot(0) for CODE_BLOCK@2012821366
 
 	Caused by: java.lang.Throwable
 
@@ -5876,7 +6105,7 @@ ROOT CAUSES
 
 File extensionToLocalClass.kt-471007721.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@402465776 new value: Snapshot(0) for CODE_BLOCK@796167406
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@2115275226 new value: Snapshot(0) for CODE_BLOCK@1242704125
 
 	Caused by: java.lang.Throwable
 
@@ -5906,7 +6135,7 @@ ROOT CAUSES
 
 File hiddenSuperOverrideIn1.0.kt-127445899.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: No declaration for inherited open fun test(): kotlin.String defined in box.<no name provided>[SimpleFunctionDescriptorImpl@75cf9299]
+	Caused by: java.lang.AssertionError: No declaration for inherited open fun test(): kotlin.String defined in box.<no name provided>[SimpleFunctionDescriptorImpl@fd04da8]
 	at org.jetbrains.kotlin.resolve.lazy.descriptors.LazyClassMemberScope$generateFakeOverrides$1.overrideConflict(LazyClassMemberScope.kt:397)
 	at org.jetbrains.kotlin.resolve.OverridingUtil.extractAndBindOverridesForMember(OverridingUtil.java:453)
 	at org.jetbrains.kotlin.resolve.OverridingUtil.generateOverridesInFunctionGroup(OverridingUtil.java:419)
@@ -6060,7 +6289,7 @@ ROOT CAUSES
 
 File constructors.kt-803823115.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@176758013 new value: Snapshot(0) for CODE_BLOCK@1356803455
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@834572097 new value: Snapshot(0) for CODE_BLOCK@74015103
 
 	Caused by: java.lang.Throwable
 
@@ -6093,6 +6322,18 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.types.expressions.BasicExpressionTypingVisitor.visitExclExclExpression(BasicExpressionTypingVisitor.java:837)
 	at org.jetbrains.kotlin.types.expressions.BasicExpressionTypingVisitor.visitUnaryExpression(BasicExpressionTypingVisitor.java:728)
 	at org.jetbrains.kotlin.types.expressions.ExpressionTypingVisitorDispatcher.visitUnaryExpression(ExpressionTypingVisitorDispatcher.java:390)
+
+File memberOfGenericClass.kt123609951.kt_minimized.kt
+ROOT CAUSES
+	The root cause was thrown at: callUtil.kt:186
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:323)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genStatement(ExpressionCodegen.java:367)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:333)
+
+	Caused by: java.lang.AssertionError: No resolved call for 'in' 
+	at org.jetbrains.kotlin.resolve.calls.callUtil.CallUtilKt.getResolvedCallWithAssert(callUtil.kt:186)
+	at org.jetbrains.kotlin.codegen.RangeCodegenUtil.isPrimitiveRangeToExtension(RangeCodegenUtil.java:183)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.lambda$generateIn$18(ExpressionCodegen.java:2859)
 
 File splitTry.kt-2037566695.kt
 ROOT CAUSES
@@ -6184,7 +6425,7 @@ ROOT CAUSES
 
 File innerConstructorFromTopLevelOneStringArg.kt-988335090.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1249376255 new value: Snapshot(0) for CODE_BLOCK@606099102
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1817910545 new value: Snapshot(0) for CODE_BLOCK@103054068
 
 	Caused by: java.lang.Throwable
 
@@ -6256,7 +6497,7 @@ ROOT CAUSES
 
 File booleanNotIntrinsic.kt-1767516354.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1301536880 new value: Snapshot(0) for CODE_BLOCK@850418852
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1335704528 new value: Snapshot(0) for CODE_BLOCK@1587439321
 
 	Caused by: java.lang.Throwable
 
@@ -6266,6 +6507,13 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.types.expressions.BasicExpressionTypingVisitor.visitExclExclExpression(BasicExpressionTypingVisitor.java:837)
 	at org.jetbrains.kotlin.types.expressions.BasicExpressionTypingVisitor.visitUnaryExpression(BasicExpressionTypingVisitor.java:728)
 	at org.jetbrains.kotlin.types.expressions.ExpressionTypingVisitorDispatcher.visitUnaryExpression(ExpressionTypingVisitorDispatcher.java:390)
+
+File delegation3.kt2118096790.kt_minimized.kt
+ROOT CAUSES
+	java.lang.AssertionError: No declaration for inherited open infix external inline tailrec suspend fun foo(): kotlin.Int defined in Test2[SimpleFunctionDescriptorImpl@6029421d]
+	at org.jetbrains.kotlin.resolve.lazy.descriptors.LazyClassMemberScope$generateFakeOverrides$1.overrideConflict(LazyClassMemberScope.kt:397)
+	at org.jetbrains.kotlin.resolve.OverridingUtil.extractAndBindOverridesForMember(OverridingUtil.java:453)
+	at org.jetbrains.kotlin.resolve.OverridingUtil.generateOverridesInFunctionGroup(OverridingUtil.java:419)
 
 File kt5953.kt-1480266412.kt
 ROOT CAUSES
@@ -6295,7 +6543,7 @@ ROOT CAUSES
 
 File parametersEqualsHashCode.kt572529213.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1439960111 new value: Snapshot(0) for CODE_BLOCK@1216794237
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@163087074 new value: Snapshot(0) for CODE_BLOCK@1765984095
 
 	Caused by: java.lang.Throwable
 
@@ -6310,6 +6558,18 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130)
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
+
+File innerConstructorFromTopLevelOneStringArg.kt-1018510954.kt_minimized.kt
+ROOT CAUSES
+	The root cause was thrown at: callUtil.kt:186
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:323)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genStatement(ExpressionCodegen.java:367)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.generateBlock(ExpressionCodegen.java:1221)
+
+	Caused by: java.lang.AssertionError: No resolved call for '!in' 
+	at org.jetbrains.kotlin.resolve.calls.callUtil.CallUtilKt.getResolvedCallWithAssert(callUtil.kt:186)
+	at org.jetbrains.kotlin.codegen.RangeCodegenUtil.isPrimitiveRangeToExtension(RangeCodegenUtil.java:183)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.lambda$generateIn$18(ExpressionCodegen.java:2859)
 
 File signatureOfSimpleInnerSimpleOuter.kt-140753792.kt
 ROOT CAUSES
@@ -6355,7 +6615,7 @@ ROOT CAUSES
 
 File useSiteVariance.kt-446984019.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1878222888 new value: Snapshot(0) for CODE_BLOCK@1761810079
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@510711093 new value: Snapshot(0) for CODE_BLOCK@1366585543
 
 	Caused by: java.lang.Throwable
 
@@ -6466,6 +6726,13 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
 
+File hiddenSuperOverrideIn1.0.kt414448909.kt_minimized.kt
+ROOT CAUSES
+	Caused by: java.lang.AssertionError: No declaration for inherited open operator infix inline suspend fun test(): kotlin.String defined in box.<no name provided>[SimpleFunctionDescriptorImpl@6f445cce]
+	at org.jetbrains.kotlin.resolve.lazy.descriptors.LazyClassMemberScope$generateFakeOverrides$1.overrideConflict(LazyClassMemberScope.kt:397)
+	at org.jetbrains.kotlin.resolve.OverridingUtil.extractAndBindOverridesForMember(OverridingUtil.java:453)
+	at org.jetbrains.kotlin.resolve.OverridingUtil.generateOverridesInFunctionGroup(OverridingUtil.java:419)
+
 File reflectionUsage.kt-1539214654.kt
 ROOT CAUSES
 	The root cause was thrown at: callUtil.kt:186
@@ -6497,14 +6764,14 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:289)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.visitParenthesizedExpression(ExpressionCodegen.java:445)
 
-	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@533b042f (ErrorType).
+	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@45116317 (ErrorType).
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130)
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
 
 File equalsHashCodeToString.kt-1836720748.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1287686804 new value: Snapshot(0) for CODE_BLOCK@1115518028
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@943404832 new value: Snapshot(0) for CODE_BLOCK@1630363223
 
 	Caused by: java.lang.Throwable
 
@@ -6626,7 +6893,7 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.PackagePartCodegen.generateBody(PackagePartCodegen.java:95)
 	at org.jetbrains.kotlin.codegen.MemberCodegen.generate(MemberCodegen.java:145)
 
-	Caused by: java.lang.IllegalStateException: Couldn't build context for public final val obj: box.Local.obj.<no name provided> defined in box.Local[PropertyDescriptorImpl@3fc51428]
+	Caused by: java.lang.IllegalStateException: Couldn't build context for public final val obj: box.Local.obj.<no name provided> defined in box.Local[PropertyDescriptorImpl@21c41d6a]
 	at org.jetbrains.kotlin.codegen.inline.PsiSourceCompilerForInline$Companion.getContext(SourceCompilerForInline.kt:455)
 	at org.jetbrains.kotlin.codegen.inline.PsiSourceCompilerForInline$Companion.getContext(SourceCompilerForInline.kt:423)
 	at org.jetbrains.kotlin.codegen.inline.PsiSourceCompilerForInline$Companion.getContext(SourceCompilerForInline.kt:423)
@@ -6701,6 +6968,18 @@ ROOT CAUSES
 	at org.jetbrains.org.objectweb.asm.tree.analysis.Frame.pop(Frame.java:221)
 	at org.jetbrains.kotlin.codegen.optimization.fixStack.FixStackAnalyzer$InternalAnalyzer$FixStackFrame.pop(FixStackAnalyzer.kt:149)
 	at org.jetbrains.kotlin.codegen.optimization.fixStack.FixStackAnalyzer$InternalAnalyzer$FixStackFrame.pop(FixStackAnalyzer.kt:88)
+
+File genericOverriddenProperty.kt-33767158.kt_minimized.kt
+ROOT CAUSES
+	The root cause was thrown at: callUtil.kt:186
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:323)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genStatement(ExpressionCodegen.java:367)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:333)
+
+	Caused by: java.lang.AssertionError: No resolved call for 'in' 
+	at org.jetbrains.kotlin.resolve.calls.callUtil.CallUtilKt.getResolvedCallWithAssert(callUtil.kt:186)
+	at org.jetbrains.kotlin.codegen.RangeCodegenUtil.isPrimitiveRangeToExtension(RangeCodegenUtil.java:183)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.lambda$generateIn$18(ExpressionCodegen.java:2859)
 
 File typeAliasAsBareType.kt1285308530.kt
 ROOT CAUSES
@@ -6834,7 +7113,7 @@ ROOT CAUSES
 
 File kt3414.kt-1351099902.kt
 ROOT CAUSES
-	java.lang.AssertionError: No declaration for inherited open suspend fun foo(): kotlin.Int defined in Z[SimpleFunctionDescriptorImpl@71d49a19]
+	java.lang.AssertionError: No declaration for inherited open suspend fun foo(): kotlin.Int defined in Z[SimpleFunctionDescriptorImpl@672b36be]
 	at org.jetbrains.kotlin.resolve.lazy.descriptors.LazyClassMemberScope$generateFakeOverrides$1.overrideConflict(LazyClassMemberScope.kt:397)
 	at org.jetbrains.kotlin.resolve.OverridingUtil.extractAndBindOverridesForMember(OverridingUtil.java:453)
 	at org.jetbrains.kotlin.resolve.OverridingUtil.generateOverridesInFunctionGroup(OverridingUtil.java:419)
@@ -6846,10 +7125,22 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:289)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:329)
 
-	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@4126ba6b (ErrorType).
+	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@17b87b58 (ErrorType).
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130)
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
+
+File functionFromStdlib.kt-922848498.kt_minimized.kt
+ROOT CAUSES
+	java.lang.IllegalStateException: java.lang.AssertionError: No resolved call for 'in' 
+	at org.jetbrains.kotlin.codegen.CompilationErrorHandler.lambda$static$0(CompilationErrorHandler.java:24)
+	at org.jetbrains.kotlin.codegen.PackageCodegenImpl.generate(PackageCodegenImpl.java:74)
+	at org.jetbrains.kotlin.codegen.KotlinCodegenFacade.generatePackage(KotlinCodegenFacade.java:99)
+
+	Caused by: java.lang.AssertionError: No resolved call for 'in' 
+	at org.jetbrains.kotlin.resolve.calls.callUtil.CallUtilKt.getResolvedCallWithAssert(callUtil.kt:186)
+	at org.jetbrains.kotlin.codegen.RangeCodegenUtil.isPrimitiveRangeToExtension(RangeCodegenUtil.java:183)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.lambda$generateIn$18(ExpressionCodegen.java:2859)
 
 File objectFunction.kt1388456393.kt
 ROOT CAUSES
@@ -6900,13 +7191,13 @@ ROOT CAUSES
 
 File genericArrayElementType.kt-775107092.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@559447757 new value: Snapshot(0) for CODE_BLOCK@395153437
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@277078678 new value: Snapshot(0) for CODE_BLOCK@1007578430
 
 	Caused by: java.lang.Throwable
 
 File array.kt896321926.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1714846166 new value: Snapshot(0) for CODE_BLOCK@1176298875
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@696364066 new value: Snapshot(0) for CODE_BLOCK@1889322271
 
 	Caused by: java.lang.Throwable
 
@@ -6936,6 +7227,30 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.types.expressions.ControlStructureTypingVisitor.visitIfExpression(ControlStructureTypingVisitor.java:90)
 	at org.jetbrains.kotlin.types.expressions.ExpressionTypingVisitorDispatcher.visitIfExpression(ExpressionTypingVisitorDispatcher.java:286)
 
+File genericOverriddenFunction.kt1130900485.kt_minimized.kt
+ROOT CAUSES
+	The root cause was thrown at: callUtil.kt:186
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:323)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genStatement(ExpressionCodegen.java:367)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:333)
+
+	Caused by: java.lang.AssertionError: No resolved call for '!in' 
+	at org.jetbrains.kotlin.resolve.calls.callUtil.CallUtilKt.getResolvedCallWithAssert(callUtil.kt:186)
+	at org.jetbrains.kotlin.codegen.RangeCodegenUtil.isPrimitiveRangeToExtension(RangeCodegenUtil.java:183)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.lambda$generateIn$18(ExpressionCodegen.java:2859)
+
+File genericValOnLHS.kt1530184828.kt_minimized.kt
+ROOT CAUSES
+	The root cause was thrown at: callUtil.kt:186
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:323)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genStatement(ExpressionCodegen.java:367)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:333)
+
+	Caused by: java.lang.AssertionError: No resolved call for '!in' 
+	at org.jetbrains.kotlin.resolve.calls.callUtil.CallUtilKt.getResolvedCallWithAssert(callUtil.kt:186)
+	at org.jetbrains.kotlin.codegen.RangeCodegenUtil.isPrimitiveRangeToExtension(RangeCodegenUtil.java:183)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.lambda$generateIn$18(ExpressionCodegen.java:2859)
+
 File kt2831.kt261497815.kt
 ROOT CAUSES
 	The root cause was thrown at: KotlinTypeMapper.java:130
@@ -6943,7 +7258,7 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:289)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.visitParenthesizedExpression(ExpressionCodegen.java:445)
 
-	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@4cec2879 (ErrorType).
+	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@299418c0 (ErrorType).
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130)
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
@@ -6955,7 +7270,7 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:289)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:329)
 
-	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@1a6c8d7c (ErrorType).
+	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@6c9896d9 (ErrorType).
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130)
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
@@ -7007,6 +7322,18 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.visitCallableReferenceExpression(ExpressionCodegen.java:2670)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.visitCallableReferenceExpression(ExpressionCodegen.java:122)
 
+File invokePropertyReference.kt-1962550945.kt_minimized.kt
+ROOT CAUSES
+	The root cause was thrown at: callUtil.kt:186
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:323)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genStatement(ExpressionCodegen.java:367)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:333)
+
+	Caused by: java.lang.AssertionError: No resolved call for '!in' 
+	at org.jetbrains.kotlin.resolve.calls.callUtil.CallUtilKt.getResolvedCallWithAssert(callUtil.kt:186)
+	at org.jetbrains.kotlin.codegen.RangeCodegenUtil.isPrimitiveRangeToExtension(RangeCodegenUtil.java:183)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.lambda$generateIn$18(ExpressionCodegen.java:2859)
+
 File cannotCallEnumConstructor.kt429079443.kt
 ROOT CAUSES
 	The root cause was thrown at: KotlinTypeMapper.java:130
@@ -7056,7 +7383,7 @@ ROOT CAUSES
 
 File parametersToString.kt-1624155609.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@506363359 new value: Snapshot(0) for CODE_BLOCK@1378270045
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@235712046 new value: Snapshot(0) for CODE_BLOCK@373373164
 
 	Caused by: java.lang.Throwable
 
@@ -7086,7 +7413,7 @@ ROOT CAUSES
 
 File innerClassConstructor.kt1261735938.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@932835301 new value: Snapshot(0) for CODE_BLOCK@205354523
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1068016856 new value: Snapshot(0) for CODE_BLOCK@927427136
 
 	Caused by: java.lang.Throwable
 
@@ -7185,6 +7512,18 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.visitCallableReferenceExpression(ExpressionCodegen.java:2670)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.visitCallableReferenceExpression(ExpressionCodegen.java:122)
 
+File topLevelFunctions.kt-1914747726.kt_minimized.kt
+ROOT CAUSES
+	The root cause was thrown at: callUtil.kt:186
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:323)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genStatement(ExpressionCodegen.java:367)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:333)
+
+	Caused by: java.lang.AssertionError: No resolved call for 'in' 
+	at org.jetbrains.kotlin.resolve.calls.callUtil.CallUtilKt.getResolvedCallWithAssert(callUtil.kt:186)
+	at org.jetbrains.kotlin.codegen.RangeCodegenUtil.isPrimitiveRangeToExtension(RangeCodegenUtil.java:183)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.lambda$generateIn$18(ExpressionCodegen.java:2859)
+
 File enumEntryMember.kt1320656102.kt
 ROOT CAUSES
 	Caused by: java.lang.NullPointerException
@@ -7223,7 +7562,7 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.PackagePartCodegen.generateBody(PackagePartCodegen.java:95)
 	at org.jetbrains.kotlin.codegen.MemberCodegen.generate(MemberCodegen.java:145)
 
-	Caused by: java.lang.IllegalStateException: Couldn't build context for public final val obj: box.Local.obj.<no name provided> defined in box.Local[PropertyDescriptorImpl@f2d966b]
+	Caused by: java.lang.IllegalStateException: Couldn't build context for public final val obj: box.Local.obj.<no name provided> defined in box.Local[PropertyDescriptorImpl@137b7746]
 	at org.jetbrains.kotlin.codegen.inline.PsiSourceCompilerForInline$Companion.getContext(SourceCompilerForInline.kt:455)
 	at org.jetbrains.kotlin.codegen.inline.PsiSourceCompilerForInline$Companion.getContext(SourceCompilerForInline.kt:423)
 	at org.jetbrains.kotlin.codegen.inline.PsiSourceCompilerForInline$Companion.getContext(SourceCompilerForInline.kt:423)
@@ -7275,10 +7614,22 @@ ROOT CAUSES
 
 File falseSmartCast.kt-117076066.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewriting key Int?: Ext {public final fun kotlin.Int?.bar(): kotlin.String defined in SuperFoo[SimpleFunctionDescriptorImpl@17e0ab13]} for implicit smart cast on baz: was Int, now Foo
+	Caused by: java.lang.AssertionError: Rewriting key Int?: Ext {public final fun kotlin.Int?.bar(): kotlin.String defined in SuperFoo[SimpleFunctionDescriptorImpl@5e68bc6e]} for implicit smart cast on baz: was Int, now Foo
 	at org.jetbrains.kotlin.resolve.calls.smartcasts.SmartCastManager$Companion.checkAndRecordPossibleCast(SmartCastManager.kt:177)
 	at org.jetbrains.kotlin.resolve.calls.CandidateResolver.checkReceiver(CandidateResolver.kt:554)
 	at org.jetbrains.kotlin.resolve.calls.CandidateResolver.checkReceivers(CandidateResolver.kt:473)
+
+File jvmErasureOfClass.kt1032154437.kt_minimized.kt
+ROOT CAUSES
+	The root cause was thrown at: callUtil.kt:186
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:323)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genStatement(ExpressionCodegen.java:367)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:333)
+
+	Caused by: java.lang.AssertionError: No resolved call for '!in' 
+	at org.jetbrains.kotlin.resolve.calls.callUtil.CallUtilKt.getResolvedCallWithAssert(callUtil.kt:186)
+	at org.jetbrains.kotlin.codegen.RangeCodegenUtil.isPrimitiveRangeToExtension(RangeCodegenUtil.java:183)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.lambda$generateIn$18(ExpressionCodegen.java:2859)
 
 File manyArgumentsOnlyOneDefault.kt-1922227619.kt_minimized.kt
 ROOT CAUSES
@@ -7294,7 +7645,7 @@ ROOT CAUSES
 
 File nestedConstructorFromClass.kt2126945740.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@271173440 new value: Snapshot(0) for CODE_BLOCK@173684692
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@1547877197 new value: Snapshot(0) for CODE_BLOCK@545605245
 
 	Caused by: java.lang.Throwable
 
@@ -7334,6 +7685,18 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
 
+File parametersToString.kt77997164.kt_minimized.kt
+ROOT CAUSES
+	The root cause was thrown at: callUtil.kt:186
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:323)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genStatement(ExpressionCodegen.java:367)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:333)
+
+	Caused by: java.lang.AssertionError: No resolved call for '!in' 
+	at org.jetbrains.kotlin.resolve.calls.callUtil.CallUtilKt.getResolvedCallWithAssert(callUtil.kt:186)
+	at org.jetbrains.kotlin.codegen.RangeCodegenUtil.isPrimitiveRangeToExtension(RangeCodegenUtil.java:183)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.lambda$generateIn$18(ExpressionCodegen.java:2859)
+
 File kt16411.kt-1138518541.kt
 ROOT CAUSES
 	The root cause was thrown at: TransformationMethodVisitor.java:88
@@ -7371,7 +7734,7 @@ ROOT CAUSES
 
 File objectFunction.kt-90214744.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@2015735678 new value: Snapshot(0) for CODE_BLOCK@1537327790
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@1634238634 new value: Snapshot(0) for CODE_BLOCK@393242288
 
 	}).call("K")
 	at org.jetbrains.kotlin.com.intellij.openapi.diagnostic.DefaultLogger.error(DefaultLogger.java:71)
@@ -7441,7 +7804,7 @@ ROOT CAUSES
 
 File kt15446.kt-834666362.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(2) for CODE_BLOCK@1167557608 new value: Snapshot(0) for CODE_BLOCK@836853945
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(2) for CODE_BLOCK@2062882312 new value: Snapshot(0) for CODE_BLOCK@867695373
 
 	Caused by: java.lang.Throwable
 
@@ -7454,7 +7817,7 @@ ROOT CAUSES
 
 File genericValOnLHS.kt1887003830.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@11194411 new value: Snapshot(0) for CODE_BLOCK@465698800
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1857000731 new value: Snapshot(0) for CODE_BLOCK@2044470105
 
 	Caused by: java.lang.Throwable
 
@@ -7504,9 +7867,21 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.optimization.fixStack.FixStackAnalyzer$InternalAnalyzer$FixStackFrame.pop(FixStackAnalyzer.kt:149)
 	at org.jetbrains.kotlin.codegen.optimization.fixStack.FixStackAnalyzer$InternalAnalyzer$FixStackFrame.pop(FixStackAnalyzer.kt:88)
 
+File objectFunction.kt1760766832.kt_minimized.kt
+ROOT CAUSES
+	java.lang.IllegalStateException: java.lang.AssertionError: No resolved call for 'in' 
+	at org.jetbrains.kotlin.codegen.CompilationErrorHandler.lambda$static$0(CompilationErrorHandler.java:24)
+	at org.jetbrains.kotlin.codegen.PackageCodegenImpl.generate(PackageCodegenImpl.java:74)
+	at org.jetbrains.kotlin.codegen.KotlinCodegenFacade.generatePackage(KotlinCodegenFacade.java:99)
+
+	Caused by: java.lang.AssertionError: No resolved call for 'in' 
+	at org.jetbrains.kotlin.resolve.calls.callUtil.CallUtilKt.getResolvedCallWithAssert(callUtil.kt:186)
+	at org.jetbrains.kotlin.codegen.RangeCodegenUtil.isPrimitiveRangeToExtension(RangeCodegenUtil.java:183)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.lambda$generateIn$18(ExpressionCodegen.java:2859)
+
 File innerConstructorFromTopLevelNoArgs.kt-1917926333.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1704983105 new value: Snapshot(0) for CODE_BLOCK@1756624251
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@345750382 new value: Snapshot(0) for CODE_BLOCK@1635048215
 
 	Caused by: java.lang.Throwable
 
@@ -7547,13 +7922,13 @@ ROOT CAUSES
 
 File parameterizedTypeArgument.kt609152783.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1585278870 new value: Snapshot(0) for CODE_BLOCK@48443991
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@693376085 new value: Snapshot(0) for CODE_BLOCK@1970632015
 
 	Caused by: java.lang.Throwable
 
 File jvmStaticObjectFunction.kt-250271786.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@2103707488 new value: Snapshot(0) for CODE_BLOCK@784611021
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@1960557733 new value: Snapshot(0) for CODE_BLOCK@553719998
 
 	})).call("K")
 	at org.jetbrains.kotlin.com.intellij.openapi.diagnostic.DefaultLogger.error(DefaultLogger.java:71)
@@ -7693,7 +8068,7 @@ ROOT CAUSES
 
 File kt3414.kt167770255.kt
 ROOT CAUSES
-	java.lang.AssertionError: No declaration for inherited open operator infix inline tailrec suspend fun foo(): kotlin.Int defined in Z[SimpleFunctionDescriptorImpl@618d96aa]
+	java.lang.AssertionError: No declaration for inherited open operator infix inline tailrec suspend fun foo(): kotlin.Int defined in Z[SimpleFunctionDescriptorImpl@78939b7d]
 	at org.jetbrains.kotlin.resolve.lazy.descriptors.LazyClassMemberScope$generateFakeOverrides$1.overrideConflict(LazyClassMemberScope.kt:397)
 	at org.jetbrains.kotlin.resolve.OverridingUtil.extractAndBindOverridesForMember(OverridingUtil.java:453)
 	at org.jetbrains.kotlin.resolve.OverridingUtil.generateOverridesInFunctionGroup(OverridingUtil.java:419)
@@ -7712,13 +8087,13 @@ ROOT CAUSES
 
 File innerConstructorFromClass.kt1493067669.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@466530316 new value: Snapshot(0) for CODE_BLOCK@958816814
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@487187136 new value: Snapshot(0) for CODE_BLOCK@1985497429
 
 	Caused by: java.lang.Throwable
 
 File topLevelFromExtension.kt-1379420388.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@1710026166 new value: Snapshot(0) for CODE_BLOCK@247759347
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@910249701 new value: Snapshot(0) for CODE_BLOCK@1183130148
 
 	})(111, 222)
 	at org.jetbrains.kotlin.com.intellij.openapi.diagnostic.DefaultLogger.error(DefaultLogger.java:71)
@@ -7729,7 +8104,7 @@ ROOT CAUSES
 
 File nestedConstructorFromTopLevelOneStringArg.kt-214000653.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1517239917 new value: Snapshot(0) for CODE_BLOCK@1531769069
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@53200873 new value: Snapshot(0) for CODE_BLOCK@1786183061
 
 	}))("OK").result
 	at org.jetbrains.kotlin.com.intellij.openapi.diagnostic.DefaultLogger.error(DefaultLogger.java:71)
@@ -7873,7 +8248,7 @@ ROOT CAUSES
 
 File hiddenSuperOverrideIn1.0.kt-127445899.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: No declaration for inherited open fun test(): kotlin.String defined in box.<no name provided>[SimpleFunctionDescriptorImpl@de90494]
+	Caused by: java.lang.AssertionError: No declaration for inherited open fun test(): kotlin.String defined in box.<no name provided>[SimpleFunctionDescriptorImpl@f81171e]
 	at org.jetbrains.kotlin.resolve.lazy.descriptors.LazyClassMemberScope$generateFakeOverrides$1.overrideConflict(LazyClassMemberScope.kt:397)
 	at org.jetbrains.kotlin.resolve.OverridingUtil.extractAndBindOverridesForMember(OverridingUtil.java:453)
 	at org.jetbrains.kotlin.resolve.OverridingUtil.generateOverridesInFunctionGroup(OverridingUtil.java:419)
@@ -7930,7 +8305,7 @@ ROOT CAUSES
 
 File innerConstructorFromExtension.kt451431432.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@1205849178 new value: Snapshot(0) for CODE_BLOCK@1840805402
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@1474462330 new value: Snapshot(0) for CODE_BLOCK@426578231
 
 	}))(this).k
 	at org.jetbrains.kotlin.com.intellij.openapi.diagnostic.DefaultLogger.error(DefaultLogger.java:71)
@@ -7971,7 +8346,7 @@ ROOT CAUSES
 
 File innerConstructorFromTopLevelOneStringArg.kt-988335090.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@335431684 new value: Snapshot(0) for CODE_BLOCK@237509357
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@729058724 new value: Snapshot(0) for CODE_BLOCK@910685107
 
 	Caused by: java.lang.Throwable
 
@@ -8006,7 +8381,7 @@ ROOT CAUSES
 
 File classMemberFromExtension.kt1383720932.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@550299646 new value: Snapshot(0) for CODE_BLOCK@2118516555
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@26171971 new value: Snapshot(0) for CODE_BLOCK@510111150
 
 	}))(this, 222)
 	at org.jetbrains.kotlin.com.intellij.openapi.diagnostic.DefaultLogger.error(DefaultLogger.java:71)
@@ -8043,7 +8418,7 @@ ROOT CAUSES
 
 File simple.kt-220133603.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@369907097 new value: Snapshot(0) for CODE_BLOCK@1302461778
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@58064026 new value: Snapshot(0) for CODE_BLOCK@1590722383
 
 	Caused by: java.lang.Throwable
 
@@ -8188,6 +8563,18 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.types.expressions.ControlStructureTypingVisitor.visitIfExpression(ControlStructureTypingVisitor.java:90)
 	at org.jetbrains.kotlin.types.expressions.ExpressionTypingVisitorDispatcher.visitIfExpression(ExpressionTypingVisitorDispatcher.java:286)
 
+File kinds.kt1070765586.kt_minimized.kt
+ROOT CAUSES
+	The root cause was thrown at: callUtil.kt:186
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:323)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genStatement(ExpressionCodegen.java:367)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:333)
+
+	Caused by: java.lang.AssertionError: No resolved call for 'in' 
+	at org.jetbrains.kotlin.resolve.calls.callUtil.CallUtilKt.getResolvedCallWithAssert(callUtil.kt:186)
+	at org.jetbrains.kotlin.codegen.RangeCodegenUtil.isPrimitiveRangeToExtension(RangeCodegenUtil.java:183)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.lambda$generateIn$18(ExpressionCodegen.java:2859)
+
 File genericOverriddenProperty.kt-33767158.kt
 ROOT CAUSES
 	The root cause was thrown at: callUtil.kt:186
@@ -8214,7 +8601,7 @@ ROOT CAUSES
 
 File nestedConstructorFromTopLevelOneStringArg.kt-214000653.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@1782327475 new value: Snapshot(0) for CODE_BLOCK@451774052
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@1211177449 new value: Snapshot(0) for CODE_BLOCK@1063649276
 
 	}))("OK").result
 	at org.jetbrains.kotlin.com.intellij.openapi.diagnostic.DefaultLogger.error(DefaultLogger.java:71)
@@ -8270,7 +8657,7 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:289)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.visitParenthesizedExpression(ExpressionCodegen.java:445)
 
-	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@32cff1f1 (ErrorType).
+	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@1817a247 (ErrorType).
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130)
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
@@ -8313,7 +8700,7 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.PackagePartCodegen.generateBody(PackagePartCodegen.java:95)
 	at org.jetbrains.kotlin.codegen.MemberCodegen.generate(MemberCodegen.java:145)
 
-	Caused by: java.lang.IllegalStateException: Couldn't build context for public final val obj: box.Local.obj.<no name provided> defined in box.Local[PropertyDescriptorImpl@eb16873]
+	Caused by: java.lang.IllegalStateException: Couldn't build context for public final val obj: box.Local.obj.<no name provided> defined in box.Local[PropertyDescriptorImpl@71e0f876]
 	at org.jetbrains.kotlin.codegen.inline.PsiSourceCompilerForInline$Companion.getContext(SourceCompilerForInline.kt:455)
 	at org.jetbrains.kotlin.codegen.inline.PsiSourceCompilerForInline$Companion.getContext(SourceCompilerForInline.kt:423)
 	at org.jetbrains.kotlin.codegen.inline.PsiSourceCompilerForInline$Companion.getContext(SourceCompilerForInline.kt:423)
@@ -8422,13 +8809,13 @@ ROOT CAUSES
 
 File functionFromStdlib.kt-1228810117.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1675666447 new value: Snapshot(0) for CODE_BLOCK@1995249910
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@922640114 new value: Snapshot(0) for CODE_BLOCK@506981767
 
 	Caused by: java.lang.Throwable
 
 File genericOverriddenFunction.kt-1561358391.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1335607508 new value: Snapshot(0) for CODE_BLOCK@928839157
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1118940136 new value: Snapshot(0) for CODE_BLOCK@1742117398
 
 	Caused by: java.lang.Throwable
 
@@ -8557,7 +8944,7 @@ ROOT CAUSES
 
 File genericOverriddenProperty.kt-1818173800.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@683622003 new value: Snapshot(0) for CODE_BLOCK@384371382
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@830537055 new value: Snapshot(0) for CODE_BLOCK@310630547
 
 	Caused by: java.lang.Throwable
 
@@ -8567,6 +8954,18 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.types.expressions.ControlStructureTypingVisitor.visitIfExpression(ControlStructureTypingVisitor.java:145)
 	at org.jetbrains.kotlin.types.expressions.ControlStructureTypingVisitor.visitIfExpression(ControlStructureTypingVisitor.java:90)
 	at org.jetbrains.kotlin.types.expressions.ExpressionTypingVisitorDispatcher.visitIfExpression(ExpressionTypingVisitorDispatcher.java:286)
+
+File overloadPlusAssign.kt-687520517.kt_minimized.kt
+ROOT CAUSES
+	The root cause was thrown at: Collections.java:4681
+	at org.jetbrains.kotlin.codegen.inline.InlineCodegen.throwCompilationException(InlineCodegen.kt:128)
+	at org.jetbrains.kotlin.codegen.inline.InlineCodegen.performInline(InlineCodegen.kt:176)
+	at org.jetbrains.kotlin.codegen.inline.PsiInlineCodegen.genCallInner(InlineCodegen.kt:597)
+
+	Caused by: java.util.NoSuchElementException
+	at java.util.Collections$1.next(Collections.java:4681)
+	at org.jetbrains.kotlin.codegen.FunctionCodegen.generateLocalVariablesForParameters(FunctionCodegen.java:674)
+	at org.jetbrains.kotlin.codegen.FunctionCodegen.generateLocalVariableTable(FunctionCodegen.java:620)
 
 File kt8668_2.kt-1876648691.kt_minimized.kt
 ROOT CAUSES
@@ -8614,13 +9013,13 @@ ROOT CAUSES
 
 File simpleTopLevelFunctions.kt-599602163.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1834646297 new value: Snapshot(0) for CODE_BLOCK@1217301473
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1242639499 new value: Snapshot(0) for CODE_BLOCK@1368579916
 
 	Caused by: java.lang.Throwable
 
 File equalsIntrinsic.kt-326058330.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1126618934 new value: Snapshot(0) for CODE_BLOCK@1427272665
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@671001055 new value: Snapshot(0) for CODE_BLOCK@1321773063
 
 	Caused by: java.lang.Throwable
 
@@ -8631,6 +9030,18 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.types.expressions.BasicExpressionTypingVisitor.visitUnaryExpression(BasicExpressionTypingVisitor.java:728)
 	at org.jetbrains.kotlin.types.expressions.ExpressionTypingVisitorDispatcher.visitUnaryExpression(ExpressionTypingVisitorDispatcher.java:390)
 
+File useSiteVariance.kt2125966150.kt_minimized.kt
+ROOT CAUSES
+	The root cause was thrown at: callUtil.kt:186
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:323)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genStatement(ExpressionCodegen.java:367)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:333)
+
+	Caused by: java.lang.AssertionError: No resolved call for 'in' 
+	at org.jetbrains.kotlin.resolve.calls.callUtil.CallUtilKt.getResolvedCallWithAssert(callUtil.kt:186)
+	at org.jetbrains.kotlin.codegen.RangeCodegenUtil.isPrimitiveRangeToExtension(RangeCodegenUtil.java:183)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.lambda$generateIn$18(ExpressionCodegen.java:2859)
+
 File elvis.kt-431960218.kt
 ROOT CAUSES
 	The root cause was thrown at: KotlinTypeMapper.java:130
@@ -8638,7 +9049,7 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:289)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:329)
 
-	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@c2fd303 (ErrorType).
+	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@70c883d8 (ErrorType).
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130)
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
@@ -8706,7 +9117,7 @@ ROOT CAUSES
 
 File hiddenSuperOverrideIn1.0.kt414448909.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: No declaration for inherited open operator infix inline suspend fun test(): kotlin.String defined in box.<no name provided>[SimpleFunctionDescriptorImpl@12e34ddd]
+	Caused by: java.lang.AssertionError: No declaration for inherited open operator infix inline suspend fun test(): kotlin.String defined in box.<no name provided>[SimpleFunctionDescriptorImpl@7e9bbac9]
 	at org.jetbrains.kotlin.resolve.lazy.descriptors.LazyClassMemberScope$generateFakeOverrides$1.overrideConflict(LazyClassMemberScope.kt:397)
 	at org.jetbrains.kotlin.resolve.OverridingUtil.extractAndBindOverridesForMember(OverridingUtil.java:453)
 	at org.jetbrains.kotlin.resolve.OverridingUtil.generateOverridesInFunctionGroup(OverridingUtil.java:419)
@@ -8948,7 +9359,7 @@ ROOT CAUSES
 
 File objectFunction.kt-90214744.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@235876249 new value: Snapshot(0) for CODE_BLOCK@844861027
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@220960481 new value: Snapshot(0) for CODE_BLOCK@150578573
 
 	}).call("K")
 	at org.jetbrains.kotlin.com.intellij.openapi.diagnostic.DefaultLogger.error(DefaultLogger.java:71)
@@ -8971,7 +9382,7 @@ ROOT CAUSES
 
 File recursiveClosure.kt1211879654.kt_minimized.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1297767765 new value: Snapshot(0) for CODE_BLOCK@1844705399
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1722141899 new value: Snapshot(0) for CODE_BLOCK@796719697
 
 	Caused by: java.lang.Throwable
 
@@ -9038,7 +9449,7 @@ ROOT CAUSES
 
 File equalsIntrinsic.kt-326058330.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@881048523 new value: Snapshot(0) for CODE_BLOCK@235127841
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@897536327 new value: Snapshot(0) for CODE_BLOCK@1666739593
 
 	Caused by: java.lang.Throwable
 
@@ -9145,7 +9556,7 @@ ROOT CAUSES
 
 File javaCollectionsStaticMethod.kt1560649397.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@1862691868 new value: Snapshot(0) for CODE_BLOCK@2005142722
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@1655092556 new value: Snapshot(0) for CODE_BLOCK@1453675029
 
 	Caused by: java.lang.Throwable
 
@@ -9163,7 +9574,7 @@ ROOT CAUSES
 
 File jvmStaticObjectFunction.kt-250271786.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@669644198 new value: Snapshot(0) for CODE_BLOCK@1266664608
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: FUNCTION_INNER_SCOPE@24719961 new value: Snapshot(0) for CODE_BLOCK@2085121416
 
 	})).call("K")
 	at org.jetbrains.kotlin.com.intellij.openapi.diagnostic.DefaultLogger.error(DefaultLogger.java:71)
@@ -9269,7 +9680,7 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ClassBodyCodegen.generateDeclaration(ClassBodyCodegen.java:155)
 	at org.jetbrains.kotlin.codegen.ClassBodyCodegen.generateBody(ClassBodyCodegen.java:81)
 
-	Caused by: java.lang.IllegalStateException: Couldn't build context for public final val obj: Outer.foo.Local.obj.<no name provided> defined in Outer.foo.Local[PropertyDescriptorImpl@4009fe61]
+	Caused by: java.lang.IllegalStateException: Couldn't build context for public final val obj: Outer.foo.Local.obj.<no name provided> defined in Outer.foo.Local[PropertyDescriptorImpl@3f7e8c8]
 	at org.jetbrains.kotlin.codegen.inline.PsiSourceCompilerForInline$Companion.getContext(SourceCompilerForInline.kt:455)
 	at org.jetbrains.kotlin.codegen.inline.PsiSourceCompilerForInline$Companion.getContext(SourceCompilerForInline.kt:423)
 	at org.jetbrains.kotlin.codegen.inline.PsiSourceCompilerForInline$Companion.getContext(SourceCompilerForInline.kt:423)
@@ -9455,6 +9866,29 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.optimization.fixStack.FixStackAnalyzer$InternalAnalyzer$FixStackFrame.pop(FixStackAnalyzer.kt:149)
 	at org.jetbrains.kotlin.codegen.optimization.fixStack.FixStackAnalyzer$InternalAnalyzer$FixStackFrame.pop(FixStackAnalyzer.kt:88)
 
+File overloadPlusAssignReturn.kt-1677709983.kt_minimized.kt
+ROOT CAUSES
+	The root cause was thrown at: TransformationMethodVisitor.java:88
+	at org.jetbrains.kotlin.codegen.FunctionCodegen.endVisit(FunctionCodegen.java:806)
+	at org.jetbrains.kotlin.codegen.FunctionCodegen.generateMethod(FunctionCodegen.java:319)
+	at org.jetbrains.kotlin.codegen.FunctionCodegen.generateMethod(FunctionCodegen.java:176)
+
+	Caused by: org.jetbrains.kotlin.codegen.CompilationException: Back-end (JVM) Internal error: Couldn't transform method node: box (Lkotlin/coroutines/experimental/Continuation;)Ljava/lang/Object;:
+
+	Element is unknownThe root cause was thrown at: MethodAnalyzer.kt:152
+	at org.jetbrains.kotlin.codegen.TransformationMethodVisitor.visitEnd(TransformationMethodVisitor.java:88)
+	at org.jetbrains.kotlin.codegen.FunctionCodegen.endVisit(FunctionCodegen.java:794)
+
+	Caused by: org.jetbrains.org.objectweb.asm.tree.analysis.AnalyzerException: Error at instruction #30 INVOKEVIRTUAL ArrayWrapper.plus (LArrayWrapper;Lkotlin/coroutines/experimental/Continuation;)Ljava/lang/Object;: Cannot pop operand off an empty stack.
+	at org.jetbrains.kotlin.codegen.optimization.common.MethodAnalyzer.analyze(MethodAnalyzer.kt:152)
+	at org.jetbrains.kotlin.codegen.optimization.fixStack.FixStackAnalyzer.analyze(FixStackAnalyzer.kt:56)
+	at org.jetbrains.kotlin.codegen.optimization.fixStack.FixStackMethodTransformer.analyzeAndTransformBreakContinueGotos(FixStackMethodTransformer.kt:55)
+
+	Caused by: java.lang.IndexOutOfBoundsException: Cannot pop operand off an empty stack.
+	at org.jetbrains.org.objectweb.asm.tree.analysis.Frame.pop(Frame.java:221)
+	at org.jetbrains.kotlin.codegen.optimization.fixStack.FixStackAnalyzer$InternalAnalyzer$FixStackFrame.pop(FixStackAnalyzer.kt:149)
+	at org.jetbrains.kotlin.codegen.optimization.fixStack.FixStackAnalyzer$InternalAnalyzer$FixStackFrame.pop(FixStackAnalyzer.kt:88)
+
 File withNonLocalReturn.kt-1141736240.kt
 ROOT CAUSES
 	The root cause was thrown at: TransformationMethodVisitor.java:88
@@ -9597,10 +10031,22 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:289)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.visitParenthesizedExpression(ExpressionCodegen.java:445)
 
-	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@35180b16 (ErrorType).
+	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@3068e125 (ErrorType).
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130)
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
+
+File overloadBinaryOperator.kt-1996536027.kt_minimized.kt
+ROOT CAUSES
+	The root cause was thrown at: CodegenContext.java:218
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:323)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:289)
+	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:329)
+
+	Caused by: java.lang.UnsupportedOperationException: Don't know how to generate outer expression for class ArrayWrapper
+	at org.jetbrains.kotlin.codegen.context.CodegenContext.getOuterExpression(CodegenContext.java:218)
+	at org.jetbrains.kotlin.codegen.context.CodegenContext.lookupInContext(CodegenContext.java:516)
+	at org.jetbrains.kotlin.codegen.context.MethodContext.lookupInContext(MethodContext.java:81)
 
 File privateProperty.kt-1590464154.kt
 ROOT CAUSES
@@ -9687,7 +10133,7 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genStatement(ExpressionCodegen.java:367)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:333)
 
-	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@58a0652 (ErrorType).
+	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@16f38b7a (ErrorType).
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130)
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
@@ -9701,7 +10147,7 @@ ROOT CAUSES
 
 File propertyAccessors.kt-1475947596.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@671781563 new value: Snapshot(0) for CODE_BLOCK@184144087
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@640172013 new value: Snapshot(0) for CODE_BLOCK@894904492
 
 	Caused by: java.lang.Throwable
 
@@ -10078,7 +10524,7 @@ ROOT CAUSES
 
 File invokePropertyReference.kt766765282.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@586326638 new value: Snapshot(0) for CODE_BLOCK@515460596
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1631621140 new value: Snapshot(0) for CODE_BLOCK@1334973799
 
 	Caused by: java.lang.Throwable
 
@@ -10158,7 +10604,7 @@ ROOT CAUSES
 
 File inlineReifiedFun.kt280870791.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1568509263 new value: Snapshot(0) for CODE_BLOCK@1411801244
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@283562913 new value: Snapshot(0) for CODE_BLOCK@1426651171
 
 	Caused by: java.lang.Throwable
 
@@ -10297,7 +10743,7 @@ ROOT CAUSES
 
 File ordinaryMethodIsInvokedWhenNoDefaultValuesAreUsed.kt1196254124.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@316707964 new value: Snapshot(0) for CODE_BLOCK@749681620
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1574250047 new value: Snapshot(0) for CODE_BLOCK@658907746
 
 	Caused by: java.lang.Throwable
 
@@ -10563,7 +11009,7 @@ ROOT CAUSES
 
 File kinds.kt-373360278.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@1333028350 new value: Snapshot(0) for CODE_BLOCK@1217980150
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@799469285 new value: Snapshot(0) for CODE_BLOCK@1357560480
 
 	Caused by: java.lang.Throwable
 
@@ -10765,7 +11211,7 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genStatement(ExpressionCodegen.java:367)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:333)
 
-	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@35e3bc2e (ErrorType).
+	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@7a979782 (ErrorType).
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130)
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
@@ -10805,7 +11251,7 @@ ROOT CAUSES
 
 File fakeGenericCovariantOverrideWithDelegation.kt1291421651.kt
 ROOT CAUSES
-	java.lang.AssertionError: No declaration for inherited open suspend fun foo(t: kotlin.Int): kotlin.String defined in Z1[SimpleFunctionDescriptorImpl@46233dfa]
+	java.lang.AssertionError: No declaration for inherited open suspend fun foo(t: kotlin.Int): kotlin.String defined in Z1[SimpleFunctionDescriptorImpl@51d74808]
 	at org.jetbrains.kotlin.resolve.lazy.descriptors.LazyClassMemberScope$generateFakeOverrides$1.overrideConflict(LazyClassMemberScope.kt:397)
 	at org.jetbrains.kotlin.resolve.OverridingUtil.extractAndBindOverridesForMember(OverridingUtil.java:453)
 	at org.jetbrains.kotlin.resolve.OverridingUtil.generateOverridesInFunctionGroup(OverridingUtil.java:419)
@@ -10925,7 +11371,7 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genStatement(ExpressionCodegen.java:367)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:333)
 
-	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@3c5a3127 (ErrorType).
+	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@3ad3d76a (ErrorType).
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130)
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
@@ -10963,7 +11409,7 @@ ROOT CAUSES
 
 File useSiteVariance.kt-446984019.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@876081985 new value: Snapshot(0) for CODE_BLOCK@756222252
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@968063417 new value: Snapshot(0) for CODE_BLOCK@693831562
 
 	Caused by: java.lang.Throwable
 
@@ -11081,7 +11527,7 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ClassBodyCodegen.generateDeclaration(ClassBodyCodegen.java:155)
 	at org.jetbrains.kotlin.codegen.ClassBodyCodegen.generateBody(ClassBodyCodegen.java:81)
 
-	Caused by: java.lang.IllegalStateException: Couldn't build context for public final val obj: Outer.foo.Local.obj.<no name provided> defined in Outer.foo.Local[PropertyDescriptorImpl@643ddc58]
+	Caused by: java.lang.IllegalStateException: Couldn't build context for public final val obj: Outer.foo.Local.obj.<no name provided> defined in Outer.foo.Local[PropertyDescriptorImpl@481e54c8]
 	at org.jetbrains.kotlin.codegen.inline.PsiSourceCompilerForInline$Companion.getContext(SourceCompilerForInline.kt:455)
 	at org.jetbrains.kotlin.codegen.inline.PsiSourceCompilerForInline$Companion.getContext(SourceCompilerForInline.kt:423)
 	at org.jetbrains.kotlin.codegen.inline.PsiSourceCompilerForInline$Companion.getContext(SourceCompilerForInline.kt:423)
@@ -11180,7 +11626,7 @@ ROOT CAUSES
 
 File isOptional.kt-258774014.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1594140176 new value: Snapshot(0) for CODE_BLOCK@1190896405
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1073611621 new value: Snapshot(0) for CODE_BLOCK@676789720
 
 	Caused by: java.lang.Throwable
 
@@ -11212,19 +11658,19 @@ ROOT CAUSES
 
 File overrideAnyWithPrimitive.kt1407678345.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@876284813 new value: Snapshot(0) for CODE_BLOCK@1377051449
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@879584445 new value: Snapshot(0) for CODE_BLOCK@99824639
 
 	Caused by: java.lang.Throwable
 
 File returnUnit.kt-2143020508.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1639686848 new value: Snapshot(0) for CODE_BLOCK@1632466836
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@331849218 new value: Snapshot(0) for CODE_BLOCK@1224244799
 
 	Caused by: java.lang.Throwable
 
 File parametersToString.kt-1624155609.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1466479433 new value: Snapshot(0) for CODE_BLOCK@864841399
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@421113036 new value: Snapshot(0) for CODE_BLOCK@270336554
 
 	Caused by: java.lang.Throwable
 
@@ -11256,7 +11702,7 @@ ROOT CAUSES
 
 File recursiveClosure.kt1211879654.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@234634361 new value: Snapshot(0) for CODE_BLOCK@1687806124
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@426282881 new value: Snapshot(0) for CODE_BLOCK@1980122620
 
 	Caused by: java.lang.Throwable
 
@@ -11290,7 +11736,7 @@ ROOT CAUSES
 
 File functionEqualsHashCode.kt554019276.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@874455035 new value: Snapshot(0) for CODE_BLOCK@2136366976
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1028153537 new value: Snapshot(0) for CODE_BLOCK@1558758415
 
 	Caused by: java.lang.Throwable
 
@@ -11315,7 +11761,7 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:289)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.visitParenthesizedExpression(ExpressionCodegen.java:445)
 
-	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@26cd184e (ErrorType).
+	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@6a12c56 (ErrorType).
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130)
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
@@ -11417,7 +11863,7 @@ ROOT CAUSES
 
 File fakeGenericCovariantOverrideWithDelegation.kt326423031.kt
 ROOT CAUSES
-	java.lang.AssertionError: No declaration for inherited open operator infix inline tailrec suspend fun foo(t: kotlin.Int): kotlin.String defined in Z1[SimpleFunctionDescriptorImpl@7d923084]
+	java.lang.AssertionError: No declaration for inherited open operator infix inline tailrec suspend fun foo(t: kotlin.Int): kotlin.String defined in Z1[SimpleFunctionDescriptorImpl@79996a46]
 	at org.jetbrains.kotlin.resolve.lazy.descriptors.LazyClassMemberScope$generateFakeOverrides$1.overrideConflict(LazyClassMemberScope.kt:397)
 	at org.jetbrains.kotlin.resolve.OverridingUtil.extractAndBindOverridesForMember(OverridingUtil.java:453)
 	at org.jetbrains.kotlin.resolve.OverridingUtil.generateOverridesInFunctionGroup(OverridingUtil.java:419)
@@ -11448,7 +11894,7 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:289)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.visitParenthesizedExpression(ExpressionCodegen.java:445)
 
-	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@738a4325 (ErrorType).
+	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@55f461d2 (ErrorType).
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130)
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
@@ -11551,7 +11997,7 @@ ROOT CAUSES
 
 File jvmErasureOfClass.kt-2032341324.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1992118073 new value: Snapshot(0) for CODE_BLOCK@28971403
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@584946426 new value: Snapshot(0) for CODE_BLOCK@1336781003
 
 	Caused by: java.lang.Throwable
 
@@ -11630,7 +12076,7 @@ ROOT CAUSES
 
 File delegation3.kt-2141195578.kt
 ROOT CAUSES
-	java.lang.AssertionError: No declaration for inherited open suspend fun foo(): kotlin.Int defined in Test2[SimpleFunctionDescriptorImpl@5977f199]
+	java.lang.AssertionError: No declaration for inherited open suspend fun foo(): kotlin.Int defined in Test2[SimpleFunctionDescriptorImpl@166d747d]
 	at org.jetbrains.kotlin.resolve.lazy.descriptors.LazyClassMemberScope$generateFakeOverrides$1.overrideConflict(LazyClassMemberScope.kt:397)
 	at org.jetbrains.kotlin.resolve.OverridingUtil.extractAndBindOverridesForMember(OverridingUtil.java:453)
 	at org.jetbrains.kotlin.resolve.OverridingUtil.generateOverridesInFunctionGroup(OverridingUtil.java:419)
@@ -11736,7 +12182,7 @@ ROOT CAUSES
 
 File simpleTopLevelFunctions.kt-599602163.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1042431124 new value: Snapshot(0) for CODE_BLOCK@1088875795
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1392328586 new value: Snapshot(0) for CODE_BLOCK@1211567966
 
 	Caused by: java.lang.Throwable
 
@@ -11754,7 +12200,7 @@ ROOT CAUSES
 
 File specialCalls.kt1214071231.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(4) for CODE_BLOCK@1040113258 new value: Snapshot(0) for CODE_BLOCK@1293170472
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(4) for CODE_BLOCK@1366126468 new value: Snapshot(0) for CODE_BLOCK@878286497
 
 	Caused by: java.lang.Throwable
 
@@ -11779,13 +12225,13 @@ ROOT CAUSES
 
 File typeEqualsHashCode.kt235036096.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@1006795287 new value: Snapshot(0) for CODE_BLOCK@713876992
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@1512898945 new value: Snapshot(0) for CODE_BLOCK@437011727
 
 	Caused by: java.lang.Throwable
 
 File delegation3.kt2118096790.kt
 ROOT CAUSES
-	java.lang.AssertionError: No declaration for inherited open infix external inline tailrec suspend fun foo(): kotlin.Int defined in Test2[SimpleFunctionDescriptorImpl@25e1e996]
+	java.lang.AssertionError: No declaration for inherited open infix external inline tailrec suspend fun foo(): kotlin.Int defined in Test2[SimpleFunctionDescriptorImpl@22ca6661]
 	at org.jetbrains.kotlin.resolve.lazy.descriptors.LazyClassMemberScope$generateFakeOverrides$1.overrideConflict(LazyClassMemberScope.kt:397)
 	at org.jetbrains.kotlin.resolve.OverridingUtil.extractAndBindOverridesForMember(OverridingUtil.java:453)
 	at org.jetbrains.kotlin.resolve.OverridingUtil.generateOverridesInFunctionGroup(OverridingUtil.java:419)
@@ -11906,7 +12352,7 @@ ROOT CAUSES
 
 File propertyEqualsHashCode.kt1426795263.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1379862565 new value: Snapshot(0) for CODE_BLOCK@1528542951
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@490132427 new value: Snapshot(0) for CODE_BLOCK@2122925109
 
 	Caused by: java.lang.Throwable
 
@@ -12052,7 +12498,7 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genStatement(ExpressionCodegen.java:367)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:333)
 
-	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@72aace53 (ErrorType).
+	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@34df3eec (ErrorType).
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130)
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
@@ -12151,7 +12597,7 @@ ROOT CAUSES
 
 File parameterizedTypeArgument.kt609152783.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@734620225 new value: Snapshot(0) for CODE_BLOCK@984549032
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@778131836 new value: Snapshot(0) for CODE_BLOCK@720575244
 
 	Caused by: java.lang.Throwable
 
@@ -12271,7 +12717,7 @@ ROOT CAUSES
 
 File unit.kt470935645.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1310618970 new value: Snapshot(0) for CODE_BLOCK@90806953
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1734134327 new value: Snapshot(0) for CODE_BLOCK@1313768438
 
 	Caused by: java.lang.Throwable
 
@@ -12338,7 +12784,7 @@ ROOT CAUSES
 
 File constructors.kt-803823115.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1057350747 new value: Snapshot(0) for CODE_BLOCK@201542030
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1925252417 new value: Snapshot(0) for CODE_BLOCK@543985175
 
 	Caused by: java.lang.Throwable
 
@@ -12356,7 +12802,7 @@ ROOT CAUSES
 
 File equalsHashCodeToString.kt-1836720748.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@1960702153 new value: Snapshot(0) for CODE_BLOCK@1925259204
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@1431748788 new value: Snapshot(0) for CODE_BLOCK@79413158
 
 	Caused by: java.lang.Throwable
 
@@ -12374,7 +12820,7 @@ ROOT CAUSES
 
 File accessorNames.kt1408005473.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@134733082 new value: Snapshot(0) for CODE_BLOCK@866677917
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1938029653 new value: Snapshot(0) for CODE_BLOCK@402101806
 
 	Caused by: java.lang.Throwable
 
@@ -12529,7 +12975,7 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genStatement(ExpressionCodegen.java:367)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:333)
 
-	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@40493ff (ErrorType).
+	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@2983631e (ErrorType).
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130)
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
@@ -12637,7 +13083,7 @@ ROOT CAUSES
 
 File parametersEqualsHashCode.kt572529213.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@659881687 new value: Snapshot(0) for CODE_BLOCK@1860054308
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@915631328 new value: Snapshot(0) for CODE_BLOCK@112156571
 
 	Caused by: java.lang.Throwable
 
@@ -12809,7 +13255,7 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genStatement(ExpressionCodegen.java:367)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:333)
 
-	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@7794953 (ErrorType).
+	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@1e1c9630 (ErrorType).
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130)
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
@@ -12861,7 +13307,7 @@ ROOT CAUSES
 
 File typeToString.kt1293142706.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@1523400596 new value: Snapshot(0) for CODE_BLOCK@216154883
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@1172669889 new value: Snapshot(0) for CODE_BLOCK@905495167
 
 	Caused by: java.lang.Throwable
 
@@ -12884,7 +13330,7 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genStatement(ExpressionCodegen.java:367)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:333)
 
-	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@55472538 (ErrorType).
+	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@fbb1335 (ErrorType).
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130)
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
@@ -12936,14 +13382,14 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genStatement(ExpressionCodegen.java:367)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:333)
 
-	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@7f8bf9e3 (ErrorType).
+	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@52304655 (ErrorType).
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130)
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
 
 File propertyInstanceof.kt-172268193.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@998119408 new value: Snapshot(0) for CODE_BLOCK@268661881
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1391010947 new value: Snapshot(0) for CODE_BLOCK@1121080850
 
 	Caused by: java.lang.Throwable
 
@@ -13062,7 +13508,7 @@ ROOT CAUSES
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genStatement(ExpressionCodegen.java:367)
 	at org.jetbrains.kotlin.codegen.ExpressionCodegen.generateBlock(ExpressionCodegen.java:1221)
 
-	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@6227885c (ErrorType).
+	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils$UninferredParameterTypeConstructor@68864131 (ErrorType).
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130)
 	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111)
 	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
@@ -13095,7 +13541,7 @@ ROOT CAUSES
 
 File array.kt896321926.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@644164966 new value: Snapshot(0) for CODE_BLOCK@69768305
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1855152811 new value: Snapshot(0) for CODE_BLOCK@1368589116
 
 	Caused by: java.lang.Throwable
 
@@ -13345,7 +13791,7 @@ ROOT CAUSES
 
 File floatingPointParameters.kt-1592337109.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(4) for CODE_BLOCK@1253300029 new value: Snapshot(0) for CODE_BLOCK@665537965
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(4) for CODE_BLOCK@985104133 new value: Snapshot(0) for CODE_BLOCK@1014740083
 
 	Caused by: java.lang.Throwable
 
@@ -13365,7 +13811,7 @@ ROOT CAUSES
 
 File genericArrayElementType.kt-775107092.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@1268785350 new value: Snapshot(0) for CODE_BLOCK@1937618652
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(1) for CODE_BLOCK@1912047668 new value: Snapshot(0) for CODE_BLOCK@1524465893
 
 	Caused by: java.lang.Throwable
 
@@ -13609,7 +14055,7 @@ ROOT CAUSES
 
 File simpleSupertypes.kt2010908570.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@1558456932 new value: Snapshot(0) for CODE_BLOCK@582185718
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@2057697915 new value: Snapshot(0) for CODE_BLOCK@1744335663
 
 	Caused by: java.lang.Throwable
 
@@ -13622,7 +14068,7 @@ ROOT CAUSES
 
 File callableModality.kt1677203636.kt
 ROOT CAUSES
-	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@952093626 new value: Snapshot(0) for CODE_BLOCK@714942716
+	Caused by: java.lang.AssertionError: Rewrite at slice LEXICAL_SCOPE key: REFERENCE_EXPRESSION old value: Snapshot(0) for CODE_BLOCK@142608189 new value: Snapshot(0) for CODE_BLOCK@700551007
 
 	Caused by: java.lang.Throwable
 
@@ -13745,9 +14191,9 @@ ROOT CAUSES
 File defaultsNotAtEnd.kt306946801.kt
 ROOT CAUSES
 	java.lang.OutOfMemoryError: GC overhead limit exceeded
-	at org.jetbrains.kotlin.com.google.common.collect.Sets.newHashSetWithExpectedSize(Sets.java:199)
-	at org.jetbrains.kotlin.com.google.common.collect.HashMultimap.createCollection(HashMultimap.java:111)
-	at org.jetbrains.kotlin.com.google.common.collect.HashMultimap.createCollection(HashMultimap.java:49)
+	at java.util.HashMap.newNode(HashMap.java:1742)
+	at java.util.HashMap.putVal(HashMap.java:630)
+	at java.util.HashMap.put(HashMap.java:611)
 
 File startCoroutineUninterceptedOrReturnInterception.kt526571118.kt
 ROOT CAUSES
@@ -13766,16 +14212,16 @@ ROOT CAUSES
 File innerExtentionFunction.kt1763748775.kt
 ROOT CAUSES
 	java.lang.OutOfMemoryError: GC overhead limit exceeded
-	at org.jetbrains.kotlin.com.google.common.collect.AbstractMapBasedMultimap.wrapCollection(AbstractMapBasedMultimap.java:323)
-	at org.jetbrains.kotlin.com.google.common.collect.AbstractMapBasedMultimap.get(AbstractMapBasedMultimap.java:309)
-	at org.jetbrains.kotlin.com.google.common.collect.AbstractSetMultimap.get(AbstractSetMultimap.java:66)
+	at java.util.HashMap$KeySet.iterator(HashMap.java:916)
+	at java.util.HashSet.iterator(HashSet.java:172)
+	at org.jetbrains.kotlin.com.google.common.collect.AbstractMapBasedMultimap.iteratorOrListIterator(AbstractMapBasedMultimap.java:608)
 
 File maxValueMinusTwoToMaxValue.kt-589872704.kt
 ROOT CAUSES
 	java.lang.OutOfMemoryError: GC overhead limit exceeded
-	at org.jetbrains.kotlin.cfg.pseudocode.PseudocodeLabel.copy(PseudocodeLabel.kt:52)
-	at org.jetbrains.kotlin.cfg.pseudocode.PseudocodeImpl.repeatInternal(PseudocodeImpl.kt:385)
-	at org.jetbrains.kotlin.cfg.pseudocode.PseudocodeImpl.repeatPart(PseudocodeImpl.kt:364)
+	at org.jetbrains.kotlin.com.google.common.collect.Sets.newHashSetWithExpectedSize(Sets.java:199)
+	at org.jetbrains.kotlin.com.google.common.collect.HashMultimap.createCollection(HashMultimap.java:111)
+	at org.jetbrains.kotlin.com.google.common.collect.HashMultimap.createCollection(HashMultimap.java:49)
 
 File equalsNaN.kt-1653611193.kt
 ROOT CAUSES

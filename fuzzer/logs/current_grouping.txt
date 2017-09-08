@@ -27,9 +27,6 @@
 	inRangeConditionsInWhen.kt1402157247.kt
 1, java.lang.IllegalStateException: java.lang.AssertionError: Reference expression not resolved to variable descriptor with accessors	at org.jetbrains.kotlin.codegen.CompilationErrorHandler.lambda$static$0(CompilationErrorHandler.java:24),	at org.jetbrains.kotlin.codegen.PackageCodegenImpl.generate(PackageCodegenImpl.java:74),	at org.jetbrains.kotlin.codegen.KotlinCodegenFacade.generatePackage(KotlinCodegenFacade.java:99),	Caused by: java.lang.AssertionError: Reference expression not resolved to variable descriptor with accessors	at org.jetbrains.kotlin.codegen.inline.ExpressionLambda.<init>(LambdaInfo.kt:208),	at org.jetbrains.kotlin.codegen.inline.PsiInlineCodegen.rememberClosure(InlineCodegen.kt:676),	at org.jetbrains.kotlin.codegen.inline.PsiInlineCodegen.genValueAndPut(InlineCodegen.kt:658)
 	simpleVal.kt1107366409.kt
-2, CodegenContext.java:218,	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:323),	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:289),	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:329),	Caused by: java.lang.UnsupportedOperationException: Don't know how to generate outer expression	at org.jetbrains.kotlin.codegen.context.CodegenContext.getOuterExpression(CodegenContext.java:218),	at org.jetbrains.kotlin.codegen.context.CodegenContext.lookupInContext(CodegenContext.java:516),	at org.jetbrains.kotlin.codegen.context.MethodContext.lookupInContext(MethodContext.java:81)
-	capturedInLocalObject.kt1492855474.kt
-	overloadBinaryOperator.kt-1996536027.kt
 2, CodegenContext.java:218,	at org.jetbrains.kotlin.codegen.inline.InlineCodegen.throwCompilationException(InlineCodegen.kt:128),	at org.jetbrains.kotlin.codegen.inline.InlineCodegen.performInline(InlineCodegen.kt:176),	at org.jetbrains.kotlin.codegen.inline.PsiInlineCodegen.genCallInner(InlineCodegen.kt:597),	Caused by: java.lang.UnsupportedOperationException: Don't know how to generate outer expression	at org.jetbrains.kotlin.codegen.context.CodegenContext.getOuterExpression(CodegenContext.java:218),	at org.jetbrains.kotlin.codegen.context.CodegenContext.lookupInContext(CodegenContext.java:516),	at org.jetbrains.kotlin.codegen.context.MethodContext.lookupInContext(MethodContext.java:81)
 	localFunctionInFunction.kt-348690459.kt
 	kt4119_2.kt-1228141429.kt
@@ -69,10 +66,10 @@
 2, java.lang.RuntimeException: Error generating class file  (compiled from []): Method code too large!,	at org.jetbrains.kotlin.codegen.ClassFileFactory$OutputClassFile.asByteArray(ClassFileFactory.java:234),	at org.jetbrains.kotlin.cli.common.output.outputUtils.OutputUtilsKt.writeAll(outputUtils.kt:32),	at org.jetbrains.kotlin.cli.common.output.outputUtils.OutputUtilsKt.writeAllTo(outputUtils.kt:37),	Caused by: java.lang.RuntimeException: Method code too large!,	at org.jetbrains.org.objectweb.asm.MethodWriter.getSize(MethodWriter.java:2036),	at org.jetbrains.org.objectweb.asm.ClassWriter.toByteArray(ClassWriter.java:850),	at org.jetbrains.kotlin.codegen.ClassBuilderFactories$2.asBytes(ClassBuilderFactories.java:126)
 	33Parameters.kt1533000850.kt
 	32Parameters.kt-1799118150.kt
-3, Collections.java:4681,	at org.jetbrains.kotlin.codegen.inline.InlineCodegen.throwCompilationException(InlineCodegen.kt:128),	at org.jetbrains.kotlin.codegen.inline.InlineCodegen.performInline(InlineCodegen.kt:176),	at org.jetbrains.kotlin.codegen.inline.PsiInlineCodegen.genCallInner(InlineCodegen.kt:597),	Caused by: java.util.NoSuchElementException,	at java.util.Collections$1.next(Collections.java:4681),	at org.jetbrains.kotlin.codegen.FunctionCodegen.generateLocalVariablesForParameters(FunctionCodegen.java:674),	at org.jetbrains.kotlin.codegen.FunctionCodegen.generateLocalVariableTable(FunctionCodegen.java:620)
-	overloadPlusAssign.kt-687520517.kt
-	augmentedAssignmentWithArrayLHS.kt-1031783535.kt
-	assignmentOperations.kt2046607630.kt
+3, CodegenContext.java:218,	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:323),	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:289),	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:329),	Caused by: java.lang.UnsupportedOperationException: Don't know how to generate outer expression	at org.jetbrains.kotlin.codegen.context.CodegenContext.getOuterExpression(CodegenContext.java:218),	at org.jetbrains.kotlin.codegen.context.CodegenContext.lookupInContext(CodegenContext.java:516),	at org.jetbrains.kotlin.codegen.context.MethodContext.lookupInContext(MethodContext.java:81)
+	capturedInLocalObject.kt1492855474.kt
+	overloadBinaryOperator.kt-1996536027.kt_minimized.kt
+	overloadBinaryOperator.kt-1996536027.kt
 3, KotlinTypeMapper.java:130,	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:323),	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:289),	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:329),	Caused by: java.lang.IllegalStateException: Error type encountered: [ERROR : Unsubstituted type for <ERROR CLASS>] (ErrorType).,	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130),	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111),	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
 	innerClassConstructor.kt-59014460.kt
 	simpleMemberFunciton.kt-1342141811.kt
@@ -97,6 +94,11 @@
 	defaultsNotAtEnd.kt306946801.kt
 	innerExtentionFunction.kt1763748775.kt
 	maxValueMinusTwoToMaxValue.kt-589872704.kt
+4, Collections.java:4681,	at org.jetbrains.kotlin.codegen.inline.InlineCodegen.throwCompilationException(InlineCodegen.kt:128),	at org.jetbrains.kotlin.codegen.inline.InlineCodegen.performInline(InlineCodegen.kt:176),	at org.jetbrains.kotlin.codegen.inline.PsiInlineCodegen.genCallInner(InlineCodegen.kt:597),	Caused by: java.util.NoSuchElementException,	at java.util.Collections$1.next(Collections.java:4681),	at org.jetbrains.kotlin.codegen.FunctionCodegen.generateLocalVariablesForParameters(FunctionCodegen.java:674),	at org.jetbrains.kotlin.codegen.FunctionCodegen.generateLocalVariableTable(FunctionCodegen.java:620)
+	overloadPlusAssign.kt-687520517.kt_minimized.kt
+	overloadPlusAssign.kt-687520517.kt
+	augmentedAssignmentWithArrayLHS.kt-1031783535.kt
+	assignmentOperations.kt2046607630.kt
 4, KotlinTypeMapper.java:130,	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:323),	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genStatement(ExpressionCodegen.java:367),	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:333),	Caused by: java.lang.IllegalStateException: Error type encountered: [ERROR : Unresolved class] (ErrorType).,	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130),	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111),	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
 	simpleClassLiteral.kt-1343825835.kt
 	genericClass.kt1613800526.kt
@@ -154,25 +156,16 @@
 	genericArrayElementType.kt-1969892591.kt
 	immutableRemove.kt1045043784.kt
 	genericTypeWithNothing.kt-987566101.kt
-8, TransformationMethodVisitor.java:88,	at org.jetbrains.kotlin.codegen.FunctionCodegen.endVisit(FunctionCodegen.java:806),	at org.jetbrains.kotlin.codegen.FunctionCodegen.generateMethod(FunctionCodegen.java:319),	at org.jetbrains.kotlin.codegen.FunctionCodegen.generateMethod(FunctionCodegen.java:176),	Caused by: org.jetbrains.kotlin.codegen.CompilationException: Back-end (JVM) Internal error: Couldn't transform method node:,	Element is unknownThe root cause was thrown at: MethodAnalyzer.kt:152,	at org.jetbrains.kotlin.codegen.TransformationMethodVisitor.visitEnd(TransformationMethodVisitor.java:88),	at org.jetbrains.kotlin.codegen.FunctionCodegen.endVisit(FunctionCodegen.java:794),	Caused by: org.jetbrains.org.objectweb.asm.tree.analysis.AnalyzerException: Error at instruction INVOKEVIRTUAL: Cannot pop operand off an empty stack.,	at org.jetbrains.kotlin.codegen.optimization.common.MethodAnalyzer.analyze(MethodAnalyzer.kt:152),	at org.jetbrains.kotlin.codegen.optimization.fixStack.FixStackAnalyzer.analyze(FixStackAnalyzer.kt:56),	at org.jetbrains.kotlin.codegen.optimization.fixStack.FixStackMethodTransformer.analyzeAndTransformBreakContinueGotos(FixStackMethodTransformer.kt:55),	Caused by: java.lang.IndexOutOfBoundsException: Cannot pop operand off an empty stack.,	at org.jetbrains.org.objectweb.asm.tree.analysis.Frame.pop(Frame.java:221),	at org.jetbrains.kotlin.codegen.optimization.fixStack.FixStackAnalyzer$InternalAnalyzer$FixStackFrame.pop(FixStackAnalyzer.kt:149),	at org.jetbrains.kotlin.codegen.optimization.fixStack.FixStackAnalyzer$InternalAnalyzer$FixStackFrame.pop(FixStackAnalyzer.kt:88)
+9, TransformationMethodVisitor.java:88,	at org.jetbrains.kotlin.codegen.FunctionCodegen.endVisit(FunctionCodegen.java:806),	at org.jetbrains.kotlin.codegen.FunctionCodegen.generateMethod(FunctionCodegen.java:319),	at org.jetbrains.kotlin.codegen.FunctionCodegen.generateMethod(FunctionCodegen.java:176),	Caused by: org.jetbrains.kotlin.codegen.CompilationException: Back-end (JVM) Internal error: Couldn't transform method node:,	Element is unknownThe root cause was thrown at: MethodAnalyzer.kt:152,	at org.jetbrains.kotlin.codegen.TransformationMethodVisitor.visitEnd(TransformationMethodVisitor.java:88),	at org.jetbrains.kotlin.codegen.FunctionCodegen.endVisit(FunctionCodegen.java:794),	Caused by: org.jetbrains.org.objectweb.asm.tree.analysis.AnalyzerException: Error at instruction INVOKEVIRTUAL: Cannot pop operand off an empty stack.,	at org.jetbrains.kotlin.codegen.optimization.common.MethodAnalyzer.analyze(MethodAnalyzer.kt:152),	at org.jetbrains.kotlin.codegen.optimization.fixStack.FixStackAnalyzer.analyze(FixStackAnalyzer.kt:56),	at org.jetbrains.kotlin.codegen.optimization.fixStack.FixStackMethodTransformer.analyzeAndTransformBreakContinueGotos(FixStackMethodTransformer.kt:55),	Caused by: java.lang.IndexOutOfBoundsException: Cannot pop operand off an empty stack.,	at org.jetbrains.org.objectweb.asm.tree.analysis.Frame.pop(Frame.java:221),	at org.jetbrains.kotlin.codegen.optimization.fixStack.FixStackAnalyzer$InternalAnalyzer$FixStackFrame.pop(FixStackAnalyzer.kt:149),	at org.jetbrains.kotlin.codegen.optimization.fixStack.FixStackAnalyzer$InternalAnalyzer$FixStackFrame.pop(FixStackAnalyzer.kt:88)
 	complexAugmentedAssignment.kt-1101720588.kt_minimized.kt
 	overloadPlusAssign.kt1101158123.kt_minimized.kt
 	complexAugmentedAssignment.kt-1101720588.kt
 	overloadPlusToPlusAssign.kt822354385.kt_minimized.kt
+	overloadPlusAssignReturn.kt-1677709983.kt_minimized.kt
 	overloadPlusAssign.kt1101158123.kt
 	overloadPlusAssignReturn.kt-1677709983.kt
 	overloadPlusToPlusAssign.kt822354385.kt
 	augmentedAssignmentWithArrayLHS.kt2114467230.kt
-9, callUtil.kt:186,	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:323),	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genStatement(ExpressionCodegen.java:367),	at org.jetbrains.kotlin.codegen.ExpressionCodegen.generateBlock(ExpressionCodegen.java:1221),	Caused by: java.lang.AssertionError:  ,	at org.jetbrains.kotlin.resolve.calls.callUtil.CallUtilKt.getResolvedCallWithAssert(callUtil.kt:186),	at org.jetbrains.kotlin.codegen.RangeCodegenUtil.isPrimitiveRangeToExtension(RangeCodegenUtil.java:183),	at org.jetbrains.kotlin.codegen.ExpressionCodegen.lambda$generateIn$18(ExpressionCodegen.java:2859)
-	simpleConstructor.kt252412530.kt
-	withNullability.kt-1979390283.kt_minimized.kt
-	callableReference.kt472259302.kt
-	innerConstructorFromTopLevelNoArgs.kt-1151686237.kt_minimized.kt
-	enumNameOrdinal.kt-146522053.kt
-	innerConstructorFromTopLevelNoArgs.kt-1151686237.kt
-	innerConstructorFromTopLevelOneStringArg.kt-1018510954.kt
-	withNullability.kt-1979390283.kt
-	typeProjection.kt2132536573.kt
 11, KotlinTypeMapper.java:130,	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:323),	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genStatement(ExpressionCodegen.java:367),	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:333),	Caused by: java.lang.IllegalStateException: Error type encountered: org.jetbrains.kotlin.types.ErrorUtils.UninferredParameterTypeConstructor (ErrorType).,	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper$1.processErrorType(KotlinTypeMapper.java:130),	at org.jetbrains.kotlin.load.kotlin.TypeSignatureMappingKt.mapType(typeSignatureMapping.kt:111),	at org.jetbrains.kotlin.codegen.state.KotlinTypeMapper.mapType(KotlinTypeMapper.java:454)
 	kt3903.kt-2043994693.kt_minimized.kt
 	kt3903.kt-2043994693.kt
@@ -210,11 +203,44 @@
 	kt4265.kt1583911027.kt_minimized.kt
 	kt4265.kt1583911027.kt
 	safeCallWithElvis.kt-175330980.kt
-12, java.lang.AssertionError: No declaration	at org.jetbrains.kotlin.resolve.lazy.descriptors.LazyClassMemberScope$generateFakeOverrides$1.overrideConflict(LazyClassMemberScope.kt:397),	at org.jetbrains.kotlin.resolve.OverridingUtil.extractAndBindOverridesForMember(OverridingUtil.java:453),	at org.jetbrains.kotlin.resolve.OverridingUtil.generateOverridesInFunctionGroup(OverridingUtil.java:419)
+12, callUtil.kt:186,	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:323),	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genStatement(ExpressionCodegen.java:367),	at org.jetbrains.kotlin.codegen.ExpressionCodegen.generateBlock(ExpressionCodegen.java:1221),	Caused by: java.lang.AssertionError:  ,	at org.jetbrains.kotlin.resolve.calls.callUtil.CallUtilKt.getResolvedCallWithAssert(callUtil.kt:186),	at org.jetbrains.kotlin.codegen.RangeCodegenUtil.isPrimitiveRangeToExtension(RangeCodegenUtil.java:183),	at org.jetbrains.kotlin.codegen.ExpressionCodegen.lambda$generateIn$18(ExpressionCodegen.java:2859)
+	callableReference.kt472259302.kt_minimized.kt
+	simpleConstructor.kt252412530.kt
+	withNullability.kt-1979390283.kt_minimized.kt
+	typeProjection.kt2132536573.kt_minimized.kt
+	callableReference.kt472259302.kt
+	innerConstructorFromTopLevelNoArgs.kt-1151686237.kt_minimized.kt
+	innerConstructorFromTopLevelOneStringArg.kt-1018510954.kt_minimized.kt
+	enumNameOrdinal.kt-146522053.kt
+	innerConstructorFromTopLevelNoArgs.kt-1151686237.kt
+	innerConstructorFromTopLevelOneStringArg.kt-1018510954.kt
+	withNullability.kt-1979390283.kt
+	typeProjection.kt2132536573.kt
+15, org.jetbrains.kotlin.util.ReenteringLazyValueComputationException,	at org.jetbrains.kotlin.types.DeferredType.lambda$static$0(DeferredType.java:32),	at org.jetbrains.kotlin.storage.LockBasedStorageManager$3.recursionDetected(LockBasedStorageManager.java:166),	at org.jetbrains.kotlin.storage.LockBasedStorageManager$LockBasedLazyValue.invoke(LockBasedStorageManager.java:308)
+	objectInitialization_kt5523.kt2094693925.kt_minimized.kt
+	objectProperty.kt1955565620.kt_minimized.kt
+	inheritedPropertyInObject.kt-1023871692.kt_minimized.kt
+	objectInitialization_kt5523.kt2094693925.kt
+	innerClass1.kt1449999796.kt_minimized.kt
+	kt3850.kt-1846370628.kt_minimized.kt
+	innerClass1.kt1449999796.kt
+	kt12200.kt1140639944.kt_minimized.kt
+	innerClass2.kt1621012051.kt
+	kt3850.kt-1846370628.kt
+	privateExtensionFromInitializer_kt4543.kt1506559105.kt_minimized.kt
+	inheritedPropertyInObject.kt-1023871692.kt
+	privateExtensionFromInitializer_kt4543.kt1506559105.kt
+	objectProperty.kt1955565620.kt
+	kt12200.kt1140639944.kt
+16, java.lang.AssertionError: No declaration	at org.jetbrains.kotlin.resolve.lazy.descriptors.LazyClassMemberScope$generateFakeOverrides$1.overrideConflict(LazyClassMemberScope.kt:397),	at org.jetbrains.kotlin.resolve.OverridingUtil.extractAndBindOverridesForMember(OverridingUtil.java:453),	at org.jetbrains.kotlin.resolve.OverridingUtil.generateOverridesInFunctionGroup(OverridingUtil.java:419)
 	kt3414.kt-1351099902.kt_minimized.kt
 	fakeGenericCovariantOverrideWithDelegation.kt1291421651.kt_minimized.kt
+	kt3414.kt167770255.kt_minimized.kt
+	fakeGenericCovariantOverrideWithDelegation.kt326423031.kt_minimized.kt
 	delegation3.kt-2141195578.kt_minimized.kt
 	hiddenSuperOverrideIn1.0.kt-127445899.kt_minimized.kt
+	delegation3.kt2118096790.kt_minimized.kt
+	hiddenSuperOverrideIn1.0.kt414448909.kt_minimized.kt
 	kt3414.kt-1351099902.kt
 	kt3414.kt167770255.kt
 	hiddenSuperOverrideIn1.0.kt-127445899.kt
@@ -223,20 +249,6 @@
 	fakeGenericCovariantOverrideWithDelegation.kt326423031.kt
 	delegation3.kt-2141195578.kt
 	delegation3.kt2118096790.kt
-13, org.jetbrains.kotlin.util.ReenteringLazyValueComputationException,	at org.jetbrains.kotlin.types.DeferredType.lambda$static$0(DeferredType.java:32),	at org.jetbrains.kotlin.storage.LockBasedStorageManager$3.recursionDetected(LockBasedStorageManager.java:166),	at org.jetbrains.kotlin.storage.LockBasedStorageManager$LockBasedLazyValue.invoke(LockBasedStorageManager.java:308)
-	objectInitialization_kt5523.kt2094693925.kt_minimized.kt
-	objectProperty.kt1955565620.kt_minimized.kt
-	objectInitialization_kt5523.kt2094693925.kt
-	innerClass1.kt1449999796.kt_minimized.kt
-	kt3850.kt-1846370628.kt_minimized.kt
-	innerClass1.kt1449999796.kt
-	innerClass2.kt1621012051.kt
-	kt3850.kt-1846370628.kt
-	privateExtensionFromInitializer_kt4543.kt1506559105.kt_minimized.kt
-	inheritedPropertyInObject.kt-1023871692.kt
-	privateExtensionFromInitializer_kt4543.kt1506559105.kt
-	objectProperty.kt1955565620.kt
-	kt12200.kt1140639944.kt
 16, java.lang.IllegalStateException: it must not be null,	at org.jetbrains.kotlin.diagnostics.rendering.Renderers$renderTypes$1.fun(Renderers.kt:445),	at org.jetbrains.kotlin.diagnostics.rendering.Renderers$renderTypes$1.fun(Renderers.kt:55),	at org.jetbrains.kotlin.com.intellij.openapi.util.text.StringUtil.join(StringUtil.java:1539)
 	MultiDeclForComponentExtensionsValCaptured.kt912585468.kt_minimized.kt
 	classInitializers.kt677302089.kt_minimized.kt
@@ -275,28 +287,6 @@
 	jvmAnnotationFlags.kt-284143845.kt
 	typeParametersEqualsHashCode.kt131999741.kt
 	kt14360.kt1264897291.kt
-21, MaxStackFrameSizeAndLocalsCalculator.java:-1,	at org.jetbrains.kotlin.codegen.MemberCodegen.genSimpleMember(MemberCodegen.java:230),	at org.jetbrains.kotlin.codegen.ClassBodyCodegen.generateDeclaration(ClassBodyCodegen.java:155),	at org.jetbrains.kotlin.codegen.ClassBodyCodegen.generateBody(ClassBodyCodegen.java:81),	Caused by: java.lang.IllegalArgumentException: Argument for @NotNull parameter 'name' of org/jetbrains/kotlin/codegen/inline/MaxStackFrameSizeAndLocalsCalculator.visitFieldInsn must not be null,	at org.jetbrains.kotlin.codegen.inline.MaxStackFrameSizeAndLocalsCalculator.$$$reportNull$$$0(MaxStackFrameSizeAndLocalsCalculator.java),	at org.jetbrains.kotlin.codegen.inline.MaxStackFrameSizeAndLocalsCalculator.visitFieldInsn(MaxStackFrameSizeAndLocalsCalculator.java),	at org.jetbrains.org.objectweb.asm.MethodVisitor.visitFieldInsn(MethodVisitor.java:423)
-	initVar.kt1660199029.kt_minimized.kt
-	initVal.kt902371933.kt_minimized.kt
-	primaryConstructor.kt-1770514389.kt_minimized.kt
-	objectWithInitializers.kt937886788.kt
-	secondaryConstructorWithInitializersFromClassBody.kt183082373.kt_minimized.kt
-	withoutPrimary.kt583476381.kt_minimized.kt
-	initVal.kt902371933.kt
-	primaryConstructor.kt-1770514389.kt
-	closureInsideConstrucor.kt139001320.kt_minimized.kt
-	withoutPrimarySuper.kt-1106970782.kt_minimized.kt
-	secondaryConstructorWithInitializersFromClassBody.kt183082373.kt
-	closureInsideConstrucor.kt139001320.kt
-	withoutPrimary.kt583476381.kt
-	withoutPrimarySuper.kt-1106970782.kt
-	withNonLocalReturn.kt-839663004.kt
-	initVar.kt1660199029.kt
-	kt4252_2.kt-461468692.kt
-	secondaryConstructors.kt-1066419276.kt
-	innerClassesInheritance.kt891527166.kt
-	innerClasses.kt1540475160.kt
-	localClasses.kt-384517712.kt
 21, callUtil.kt:186,	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:323),	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:289),	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:329),	Caused by: java.lang.AssertionError:  ,	at org.jetbrains.kotlin.resolve.calls.callUtil.CallUtilKt.getResolvedCallWithAssert(callUtil.kt:186),	at org.jetbrains.kotlin.codegen.ExpressionCodegen.visitCallableReferenceExpression(ExpressionCodegen.java:2670),	at org.jetbrains.kotlin.codegen.ExpressionCodegen.visitCallableReferenceExpression(ExpressionCodegen.java:122)
 	reflectionUsage.kt-1539214654.kt
 	simpleNames.kt303811876.kt
@@ -367,33 +357,31 @@
 	propertyAccessors.kt1800342096.kt
 	primitivesAndArrays.kt-223503978.kt
 	kotlinPropertyFromClassObjectAsParameter.kt108646274.kt
-26, callUtil.kt:186,	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:323),	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genStatement(ExpressionCodegen.java:367),	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:333),	Caused by: java.lang.AssertionError:  ,	at org.jetbrains.kotlin.resolve.calls.callUtil.CallUtilKt.getResolvedCallWithAssert(callUtil.kt:186),	at org.jetbrains.kotlin.codegen.RangeCodegenUtil.isPrimitiveRangeToExtension(RangeCodegenUtil.java:183),	at org.jetbrains.kotlin.codegen.ExpressionCodegen.lambda$generateIn$18(ExpressionCodegen.java:2859)
-	constructorName.kt695958862.kt
-	equalsHashCodeToString.kt-1974435865.kt_minimized.kt
-	parametersEqualsHashCode.kt1742788245.kt_minimized.kt
-	nullValue.kt2064920538.kt
-	memberOfGenericClass.kt123609951.kt
-	unit.kt-1416893130.kt_minimized.kt
-	typeEqualsHashCode.kt1103928412.kt_minimized.kt
-	genericValOnLHS.kt1530184828.kt
-	javaCollectionsStaticMethod.kt-2010394510.kt_minimized.kt
-	equalsHashCode.kt-1224965032.kt
-	genericOverriddenProperty.kt-33767158.kt
-	genericOverriddenFunction.kt1130900485.kt
-	javaCollectionsStaticMethod.kt-2010394510.kt
-	nonDefaultParameterOmitted.kt-178829523.kt
-	invokePropertyReference.kt-1962550945.kt
-	topLevelFunctions.kt-1914747726.kt
-	typeArguments.kt145312984.kt_minimized.kt
-	kinds.kt1070765586.kt
-	useSiteVariance.kt2125966150.kt
-	parametersToString.kt77997164.kt
-	jvmErasureOfClass.kt1032154437.kt
-	typeEqualsHashCode.kt1103928412.kt
-	unit.kt-1416893130.kt
-	equalsHashCodeToString.kt-1974435865.kt
-	parametersEqualsHashCode.kt1742788245.kt
-	typeArguments.kt145312984.kt
+24, MaxStackFrameSizeAndLocalsCalculator.java:-1,	at org.jetbrains.kotlin.codegen.MemberCodegen.genSimpleMember(MemberCodegen.java:230),	at org.jetbrains.kotlin.codegen.ClassBodyCodegen.generateDeclaration(ClassBodyCodegen.java:155),	at org.jetbrains.kotlin.codegen.ClassBodyCodegen.generateBody(ClassBodyCodegen.java:81),	Caused by: java.lang.IllegalArgumentException: Argument for @NotNull parameter 'name' of org/jetbrains/kotlin/codegen/inline/MaxStackFrameSizeAndLocalsCalculator.visitFieldInsn must not be null,	at org.jetbrains.kotlin.codegen.inline.MaxStackFrameSizeAndLocalsCalculator.$$$reportNull$$$0(MaxStackFrameSizeAndLocalsCalculator.java),	at org.jetbrains.kotlin.codegen.inline.MaxStackFrameSizeAndLocalsCalculator.visitFieldInsn(MaxStackFrameSizeAndLocalsCalculator.java),	at org.jetbrains.org.objectweb.asm.MethodVisitor.visitFieldInsn(MethodVisitor.java:423)
+	initVar.kt1660199029.kt_minimized.kt
+	initVal.kt902371933.kt_minimized.kt
+	primaryConstructor.kt-1770514389.kt_minimized.kt
+	secondaryConstructors.kt-1066419276.kt_minimized.kt
+	objectWithInitializers.kt937886788.kt
+	secondaryConstructorWithInitializersFromClassBody.kt183082373.kt_minimized.kt
+	withoutPrimary.kt583476381.kt_minimized.kt
+	withNonLocalReturn.kt-839663004.kt_minimized.kt
+	initVal.kt902371933.kt
+	primaryConstructor.kt-1770514389.kt
+	closureInsideConstrucor.kt139001320.kt_minimized.kt
+	withoutPrimarySuper.kt-1106970782.kt_minimized.kt
+	kt4252_2.kt-461468692.kt_minimized.kt
+	secondaryConstructorWithInitializersFromClassBody.kt183082373.kt
+	closureInsideConstrucor.kt139001320.kt
+	withoutPrimary.kt583476381.kt
+	withoutPrimarySuper.kt-1106970782.kt
+	withNonLocalReturn.kt-839663004.kt
+	initVar.kt1660199029.kt
+	kt4252_2.kt-461468692.kt
+	secondaryConstructors.kt-1066419276.kt
+	innerClassesInheritance.kt891527166.kt
+	innerClasses.kt1540475160.kt
+	localClasses.kt-384517712.kt
 27, Element is unknownThe root cause was thrown at: MethodAnalyzer.kt:152,	at org.jetbrains.kotlin.codegen.TransformationMethodVisitor.visitEnd(TransformationMethodVisitor.java:88),	at org.jetbrains.org.objectweb.asm.MethodVisitor.visitEnd(MethodVisitor.java:878),	at org.jetbrains.org.objectweb.asm.tree.MethodNode.accept(MethodNode.java:838),	Caused by: org.jetbrains.org.objectweb.asm.tree.analysis.AnalyzerException: Error at instruction DUP: Cannot pop operand off an empty stack.,	at org.jetbrains.kotlin.codegen.optimization.common.MethodAnalyzer.analyze(MethodAnalyzer.kt:152),	at org.jetbrains.kotlin.codegen.optimization.fixStack.FixStackAnalyzer.analyze(FixStackAnalyzer.kt:56),	at org.jetbrains.kotlin.codegen.optimization.fixStack.FixStackMethodTransformer.analyzeAndTransformBreakContinueGotos(FixStackMethodTransformer.kt:55),	Caused by: java.lang.IndexOutOfBoundsException: Cannot pop operand off an empty stack.,	at org.jetbrains.org.objectweb.asm.tree.analysis.Frame.pop(Frame.java:221),	at org.jetbrains.kotlin.codegen.optimization.fixStack.FixStackAnalyzer$InternalAnalyzer$FixStackFrame.pop(FixStackAnalyzer.kt:149),	at org.jetbrains.kotlin.codegen.optimization.fixStack.FixStackAnalyzer$InternalAnalyzer$FixStackFrame.pop(FixStackAnalyzer.kt:88)
 	kt10259_3.kt-1352380877.kt_minimized.kt
 	kt10259_2.kt-1684901741.kt_minimized.kt
@@ -450,32 +438,81 @@
 	nestedConstructorFromTopLevelOneStringArg.kt-214000653.kt
 	objectFunction.kt-90214744.kt
 	jvmStaticObjectFunction.kt-250271786.kt
-30, java.lang.IllegalStateException: java.lang.AssertionError:  ,	at org.jetbrains.kotlin.codegen.CompilationErrorHandler.lambda$static$0(CompilationErrorHandler.java:24),	at org.jetbrains.kotlin.codegen.PackageCodegenImpl.generate(PackageCodegenImpl.java:74),	at org.jetbrains.kotlin.codegen.KotlinCodegenFacade.generatePackage(KotlinCodegenFacade.java:99),	Caused by: java.lang.AssertionError:  ,	at org.jetbrains.kotlin.resolve.calls.callUtil.CallUtilKt.getResolvedCallWithAssert(callUtil.kt:186),	at org.jetbrains.kotlin.codegen.RangeCodegenUtil.isPrimitiveRangeToExtension(RangeCodegenUtil.java:183),	at org.jetbrains.kotlin.codegen.ExpressionCodegen.lambda$generateIn$18(ExpressionCodegen.java:2859)
+38, callUtil.kt:186,	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genQualified(ExpressionCodegen.java:323),	at org.jetbrains.kotlin.codegen.ExpressionCodegen.genStatement(ExpressionCodegen.java:367),	at org.jetbrains.kotlin.codegen.ExpressionCodegen.gen(ExpressionCodegen.java:333),	Caused by: java.lang.AssertionError:  ,	at org.jetbrains.kotlin.resolve.calls.callUtil.CallUtilKt.getResolvedCallWithAssert(callUtil.kt:186),	at org.jetbrains.kotlin.codegen.RangeCodegenUtil.isPrimitiveRangeToExtension(RangeCodegenUtil.java:183),	at org.jetbrains.kotlin.codegen.ExpressionCodegen.lambda$generateIn$18(ExpressionCodegen.java:2859)
+	constructorName.kt695958862.kt
+	equalsHashCodeToString.kt-1974435865.kt_minimized.kt
+	nullValue.kt2064920538.kt_minimized.kt
+	nonDefaultParameterOmitted.kt-178829523.kt_minimized.kt
+	parametersEqualsHashCode.kt1742788245.kt_minimized.kt
+	memberOfGenericClass.kt123609951.kt_minimized.kt
+	nullValue.kt2064920538.kt
+	memberOfGenericClass.kt123609951.kt
+	genericOverriddenProperty.kt-33767158.kt_minimized.kt
+	genericOverriddenFunction.kt1130900485.kt_minimized.kt
+	genericValOnLHS.kt1530184828.kt_minimized.kt
+	invokePropertyReference.kt-1962550945.kt_minimized.kt
+	unit.kt-1416893130.kt_minimized.kt
+	topLevelFunctions.kt-1914747726.kt_minimized.kt
+	jvmErasureOfClass.kt1032154437.kt_minimized.kt
+	parametersToString.kt77997164.kt_minimized.kt
+	typeEqualsHashCode.kt1103928412.kt_minimized.kt
+	genericValOnLHS.kt1530184828.kt
+	javaCollectionsStaticMethod.kt-2010394510.kt_minimized.kt
+	equalsHashCode.kt-1224965032.kt
+	kinds.kt1070765586.kt_minimized.kt
+	genericOverriddenProperty.kt-33767158.kt
+	genericOverriddenFunction.kt1130900485.kt
+	useSiteVariance.kt2125966150.kt_minimized.kt
+	javaCollectionsStaticMethod.kt-2010394510.kt
+	nonDefaultParameterOmitted.kt-178829523.kt
+	invokePropertyReference.kt-1962550945.kt
+	topLevelFunctions.kt-1914747726.kt
+	typeArguments.kt145312984.kt_minimized.kt
+	kinds.kt1070765586.kt
+	useSiteVariance.kt2125966150.kt
+	parametersToString.kt77997164.kt
+	jvmErasureOfClass.kt1032154437.kt
+	typeEqualsHashCode.kt1103928412.kt
+	unit.kt-1416893130.kt
+	equalsHashCodeToString.kt-1974435865.kt
+	parametersEqualsHashCode.kt1742788245.kt
+	typeArguments.kt145312984.kt
+40, java.lang.IllegalStateException: java.lang.AssertionError:  ,	at org.jetbrains.kotlin.codegen.CompilationErrorHandler.lambda$static$0(CompilationErrorHandler.java:24),	at org.jetbrains.kotlin.codegen.PackageCodegenImpl.generate(PackageCodegenImpl.java:74),	at org.jetbrains.kotlin.codegen.KotlinCodegenFacade.generatePackage(KotlinCodegenFacade.java:99),	Caused by: java.lang.AssertionError:  ,	at org.jetbrains.kotlin.resolve.calls.callUtil.CallUtilKt.getResolvedCallWithAssert(callUtil.kt:186),	at org.jetbrains.kotlin.codegen.RangeCodegenUtil.isPrimitiveRangeToExtension(RangeCodegenUtil.java:183),	at org.jetbrains.kotlin.codegen.ExpressionCodegen.lambda$generateIn$18(ExpressionCodegen.java:2859)
 	simple.kt2003866416.kt
 	constructorFromTopLevelNoArgs.kt-58026796.kt
 	constClosureOptimization.kt2031980589.kt_minimized.kt
 	privateClassMember.kt-899914171.kt_minimized.kt
 	kt12738.kt1401049324.kt_minimized.kt
+	topLevelFromExtension.kt-674079832.kt_minimized.kt
 	extension.kt-92036210.kt
 	extensionToLocalClass.kt1116895551.kt
+	extensionFromExtension.kt1063743179.kt_minimized.kt
 	simpleClosure.kt694657427.kt
 	constClosureOptimization.kt2031980589.kt
 	simpleConstructor.kt1814425491.kt
 	privateClassMember.kt-899914171.kt
+	classMemberFromExtension.kt-1611700464.kt_minimized.kt
+	constructorWithInitializer.kt-1786178393.kt_minimized.kt
+	propertyGetterAndGetFunctionDifferentReturnType.kt-267455788.kt_minimized.kt
 	genericMember.kt-1129193179.kt
 	traitImplMethodWithClassReceiver.kt-382919960.kt_minimized.kt
 	extensionFromExtension.kt1063743179.kt
 	companionObjectReceiver.kt717102194.kt
+	nestedConstructorFromClass.kt1887128534.kt_minimized.kt
 	array.kt-1745348743.kt
 	propertyGetterAndGetFunctionDifferentReturnType.kt-267455788.kt
 	constructorWithInitializer.kt-1786178393.kt
+	innerConstructorFromClass.kt556353244.kt_minimized.kt
 	traitImplMethodWithClassReceiver.kt-382919960.kt
+	innerConstructorFromExtension.kt-896045371.kt_minimized.kt
 	abstractClassMember.kt1945225272.kt
 	accessViaSubclass.kt-1546156912.kt
 	topLevelFromExtension.kt-674079832.kt
 	kt12738.kt1401049324.kt
+	functionFromStdlib.kt-922848498.kt_minimized.kt
 	classMemberFromExtension.kt-1611700464.kt
 	innerClassConstructor.kt-1631314553.kt
+	objectFunction.kt1760766832.kt_minimized.kt
 	nestedConstructorFromClass.kt1887128534.kt
 	innerConstructorFromClass.kt556353244.kt
 	innerConstructorFromExtension.kt-896045371.kt
@@ -833,7 +870,7 @@
 	anonymousObjectNoPropagate.kt1975169594.kt
 	severalClosures.kt-1574979187.kt
 	tryCatch2.kt333426801.kt
-235, java.lang.NullPointerException,	at org.jetbrains.kotlin.types.expressions.BasicExpressionTypingVisitor.visitExclExclExpression(BasicExpressionTypingVisitor.java:837),	at org.jetbrains.kotlin.types.expressions.BasicExpressionTypingVisitor.visitUnaryExpression(BasicExpressionTypingVisitor.java:728),	at org.jetbrains.kotlin.types.expressions.ExpressionTypingVisitorDispatcher.visitUnaryExpression(ExpressionTypingVisitorDispatcher.java:390)
+238, java.lang.NullPointerException,	at org.jetbrains.kotlin.types.expressions.BasicExpressionTypingVisitor.visitExclExclExpression(BasicExpressionTypingVisitor.java:837),	at org.jetbrains.kotlin.types.expressions.BasicExpressionTypingVisitor.visitUnaryExpression(BasicExpressionTypingVisitor.java:728),	at org.jetbrains.kotlin.types.expressions.ExpressionTypingVisitorDispatcher.visitUnaryExpression(ExpressionTypingVisitorDispatcher.java:390)
 	traitMember.kt-1521215673.kt_minimized.kt
 	jvmStaticCompanionObjectPropertyAccessors.kt1262733983.kt_minimized.kt
 	platformName.kt-2011393841.kt_minimized.kt
@@ -867,8 +904,10 @@
 	localClassVar.kt-722609058.kt_minimized.kt
 	specialCalls.kt1214071231.kt_minimized.kt
 	typeProjection.kt-371469758.kt_minimized.kt
+	specialCalls.kt1476897060.kt_minimized.kt
 	constructorWithInitializer.kt1184420828.kt_minimized.kt
 	specialCalls.kt-834195982.kt_minimized.kt
+	specialCalls.kt868150715.kt_minimized.kt
 	equalsIntrinsic.kt932871478.kt_minimized.kt
 	javaBeanConvention.kt349406143.kt_minimized.kt
 	innerConstructorFromExtension.kt-1390225744.kt_minimized.kt
@@ -980,6 +1019,7 @@
 	kt12738.kt435790007.kt
 	kt15446.kt1644550835.kt
 	topLevelFromExtension.kt-1801206506.kt
+	privateClassMember.kt-833234655.kt_minimized.kt
 	genericValOnLHS.kt553820674.kt
 	nullValue.kt50850025.kt
 	captureOuter.kt-1840997599.kt
