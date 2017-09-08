@@ -100,7 +100,7 @@ class ASTBuilder : KotlinBaseVisitor<List<ASTNode>>() {
     }
 
     override fun visitMembers(ctx: KotlinParser.MembersContext): List<ASTNode> {
-        return singletonList(MembersNode(ctx.memberDeclaration().flatMap { it.accept(this) }))
+        return singletonList(MembersNode(ctx.memberDeclaration().flatMap { it.accept(this) }.toMutableList()))
     }
 
     override fun visitDelegationSpecifier(ctx: KotlinParser.DelegationSpecifierContext): List<ASTNode> {
@@ -558,7 +558,7 @@ class ASTBuilder : KotlinBaseVisitor<List<ASTNode>>() {
         val preambleChildren = visitPreamble(ctx.preamble())
         val topLevelChildren = ctx.topLevelObject().flatMap { visitTopLevelObject(it) }
 
-        return singletonList(KotlinFileNode(MembersNode(preambleChildren + topLevelChildren)))
+        return singletonList(KotlinFileNode(MembersNode((preambleChildren + topLevelChildren).toMutableList())))
     }
 
     override fun visitStatements(ctx: KotlinParser.StatementsContext): List<ASTNode> {

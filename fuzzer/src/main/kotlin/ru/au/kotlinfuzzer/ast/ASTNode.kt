@@ -45,7 +45,7 @@ data class KotlinFileNode(
 /**
  * Top-level, class and object members.
  */
-data class MembersNode(override val children: List<ASTNode>) : ASTNode() {
+data class MembersNode(override val children: MutableList<ASTNode>) : ASTNode() {
     override fun <R, D> accept(visitor: ASTNodeVisitor<R, D>, data: D) = visitor.visit(this, data)
 }
 
@@ -164,7 +164,7 @@ abstract class ExpressionNode : ASTNode() {
 abstract class CodeBlockNode : ASTNode() {
 }
 
-data class StatementsNode(override val children: List<ASTNode>) : CodeBlockNode() {
+data class StatementsNode(override val children: MutableList<ASTNode>) : CodeBlockNode() {
     override fun <R, D> accept(visitor: ASTNodeVisitor<R, D>, data: D) = visitor.visit(this, data)
 }
 

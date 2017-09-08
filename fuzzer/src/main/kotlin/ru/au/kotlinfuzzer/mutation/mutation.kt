@@ -289,7 +289,7 @@ class ReplaceExprWithIf() : ReplaceExprWithStmtexpr() {
 class ReplaceExprWithTry() : ReplaceExprWithStmtexpr() {
     override fun apply(node: FuzzingFriendlyNode) {
         val origExpr = node.node!!
-        val code = StatementsNode(listOf(origExpr))
+        val code = StatementsNode(mutableListOf(origExpr))
         val tryNode = TryNode(code,
                 listOf(),
                 code)
@@ -440,10 +440,6 @@ fun mutateASTWith(ast: ASTNode, templates: List<MutationTemplate>) = runMutation
  * Can be used to test whether fuzzing process itself changes anything.
  */
 fun mutateASTShallow(ast: ASTNode): ASTNode = runMutation(ast, emptyList()).next()
-
-fun minimize(ast: ASTNode): ASTNode {
-    return ast
-}
 
 fun buildFuzzingFriendlyASTFromFile(filename: String): FuzzingFriendlyNode {
     val ast = buildASTFromFile(filename)

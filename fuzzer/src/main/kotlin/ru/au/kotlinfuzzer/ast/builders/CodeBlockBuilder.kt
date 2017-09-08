@@ -18,7 +18,7 @@ class CodeBlockBuilder : KotlinBaseVisitor<CodeBlockNode>() {
         = BlockExpressionNode(buildExpression(ctx.expression()))
 
     override fun visitStatements(ctx: KotlinParser.StatementsContext): CodeBlockNode
-        = StatementsNode(buildAST(ctx))
+        = StatementsNode(buildAST(ctx).toMutableList())
 }
 
 
